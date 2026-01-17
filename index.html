@@ -1,17 +1,152 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Easy Gezondheid</title>
+    <meta name="description" content="Praktische tips voor gedragsverandering en gezondere dagelijkse gewoontes" />
+    <link rel="stylesheet" href="style.css?v=20260118001415" />
   </head>
   <body>
+    <nav class="main-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Easy Gezondheid</a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="guide.html">Persoonlijke Gids</a></li>
+          <li><a href="calisthenics.html">Calisthenics</a></li>
+          <li><a href="mobility.html">Mobility</a></li>
+          <li><a href="slaap.html">Slaap</a></li>
+          <li><a href="mentale-gezondheid.html">Mentale Gezondheid</a></li>
+          <li><a href="voeding.html">Voeding</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+      <h1>Easy Gezondheid</h1>
+      <p class="subtitle">Kleine veranderingen, grote stappen</p>
+      <div class="hero-decorations">
+        <div class="hero-icon" style="--delay: 0s; --duration: 4s;">💪</div>
+        <div class="hero-icon" style="--delay: 1s; --duration: 5s;">🥗</div>
+        <div class="hero-icon" style="--delay: 2s; --duration: 6s;">😴</div>
+        <div class="hero-icon" style="--delay: 0.5s; --duration: 5.5s;">🧘</div>
+        <div class="hero-icon" style="--delay: 1.5s; --duration: 4.5s;">❤️</div>
+      </div>
+    </header>
+
     <main>
-      <h1>Hello 👋</h1>
-      <p>This site is hosted on GitHub Pages.</p>
-      <button id="btn">Click me</button>
+      <section class="intro">
+        <h2>Welkom</h2>
+        <p>Gezonder leven begint met kleine, haalbare veranderingen in je dagelijkse routine. Deze website helpt je om duurzame gedragsveranderingen door te voeren die passen bij jouw leven.</p>
+      </section>
+
+      <section class="principles">
+        <h2>Kernprincipes van Gedragsverandering</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Start Klein</h3>
+            <p>Begin met één kleine gewoonte tegelijk. Succes motiveert voor de volgende stap.</p>
+          </div>
+          <div class="card">
+            <h3>Maak het Dagelijks</h3>
+            <p>Consistentie is belangrijker dan perfectie. Doe het elke dag, ook als het maar 5 minuten is.</p>
+          </div>
+          <div class="card">
+            <h3>Koppel aan Bestaande Gewoontes</h3>
+            <p>Voeg nieuwe gewoontes toe aan dingen die je al doet. Bijvoorbeeld: na het tandenpoetsen 10 squats.</p>
+          </div>
+          <div class="card">
+            <h3>Houd het Bij</h3>
+            <p>Wat je meet, kun je verbeteren. Noteer je vooruitgang, hoe simpel ook.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="daily-practices">
+        <h2>Dagelijkse Praktijken</h2>
+        
+        <div class="practice">
+          <h3>Beweging</h3>
+          <ul>
+            <li>Neem de trap in plaats van de lift</li>
+            <li>Loop of fiets voor korte afstanden</li>
+            <li>Sta elk uur even op van je bureau</li>
+            <li>Doe stretches tijdens het tandenpoetsen</li>
+            <li>Parkeer bewust verder weg</li>
+          </ul>
+        </div>
+
+        <div class="practice">
+          <h3>Voeding</h3>
+          <ul>
+            <li>Drink een glas water bij het opstaan</li>
+            <li>Eet groente bij elke maaltijd</li>
+            <li>Bereid de avond tevoren je lunch voor</li>
+            <li>Eet langzaam en bewust</li>
+            <li>Beperk bewerkt voedsel stap voor stap</li>
+          </ul>
+        </div>
+
+        <div class="practice">
+          <h3>Slaap</h3>
+          <ul>
+            <li>Ga elke dag rond dezelfde tijd naar bed</li>
+            <li>Zet schermen 1 uur voor het slapen uit</li>
+            <li>Houd je slaapkamer koel (16-18°C)</li>
+            <li>Maak een rustgevend avondritueel</li>
+            <li>Vermijd cafeïne na 14:00 uur</li>
+          </ul>
+        </div>
+
+        <div class="practice">
+          <h3>Mentale Gezondheid</h3>
+          <ul>
+            <li>Start de dag met 5 minuten ademhalingsoefeningen</li>
+            <li>Noteer 3 dingen waar je dankbaar voor bent</li>
+            <li>Neem bewuste pauzes tussen taken</li>
+            <li>Beperk nieuwsconsumptie</li>
+            <li>Onderhoud sociale contacten</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="habit-tracker">
+        <h2>Gewoonte Tracker</h2>
+        <p>Kies één gewoonte om deze week te starten:</p>
+        <div id="habit-selector">
+          <button class="habit-btn" data-habit="water">Dagelijks 2L water drinken</button>
+          <button class="habit-btn" data-habit="walk">10.000 stappen per dag</button>
+          <button class="habit-btn" data-habit="sleep">Voor 23:00 slapen</button>
+          <button class="habit-btn" data-habit="veggies">Groente bij elke maaltijd</button>
+          <button class="habit-btn" data-habit="meditation">5 min meditatie per dag</button>
+        </div>
+        <div id="tracker-result"></div>
+      </section>
+
+      <section class="tips">
+        <h2>Tips voor Succesvol Volhouden</h2>
+        <ol>
+          <li><strong>Maak het zichtbaar:</strong> Leg je sportschoenen klaar, zet gezonde snacks vooraan in de koelkast</li>
+          <li><strong>Maak het aantrekkelijk:</strong> Combineer gezonde gewoontes met iets leuks (podcast tijdens het wandelen)</li>
+          <li><strong>Maak het makkelijk:</strong> Verlaag de drempel zo veel mogelijk</li>
+          <li><strong>Maak het bevredigend:</strong> Beloon jezelf voor elke week dat je volhoudt</li>
+        </ol>
+      </section>
+
+      <section class="cta">
+        <h2>Begin Vandaag</h2>
+        <p>Welke gewoonte ga je deze week toevoegen? Kies er één en begin klein. Consistentie leidt tot resultaat.</p>
+      </section>
     </main>
+
+    <footer>
+      <p>Easy Gezondheid © 2026</p>
+      <p class="disclaimer">Deze informatie is bedoeld voor educatieve doeleinden. Raadpleeg altijd een zorgverlener voor persoonlijk medisch advies.</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>

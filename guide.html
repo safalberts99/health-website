@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Persoonlijke Gids - Easy Gezondheid</title>
+    <meta name="description" content="Gezondheidsadvies op maat van jouw levensstijl" />
+    <link rel="stylesheet" href="style.css?v=20260118001415" />
+  </head>
+  <body>
+    <nav class="main-nav">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Easy Gezondheid</a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="guide.html" class="active">Persoonlijke Gids</a></li>
+          <li><a href="calisthenics.html">Calisthenics</a></li>
+          <li><a href="mobility.html">Mobility</a></li>
+          <li><a href="slaap.html">Slaap</a></li>
+          <li><a href="mentale-gezondheid.html">Mentale Gezondheid</a></li>
+          <li><a href="voeding.html">Voeding</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+      <h1>Persoonlijke Gids</h1>
+      <p class="subtitle">Gezondheidsadvies afgestemd op jouw levensstijl</p>
+    </header>
+
+    <main>
+      <section id="questionnaire">
+        <h2>Persoonlijke Gezondheidsgids</h2>
+        <p>Beantwoord de volgende vragen om advies te krijgen dat perfect bij jouw situatie past.</p>
+        
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <p class="progress-text"><span id="currentQuestion">1</span> van <span id="totalQuestions">8</span></p>
+
+        <form id="healthQuiz">
+          <!-- Question 1: Work Type -->
+          <div class="question active" data-question="1">
+            <h3>Wat beschrijft jouw werksituatie het beste?</h3>
+            <div class="options">
+              <label class="option-card">
+                <input type="radio" name="workType" value="office" required>
+                <span>Kantoorwerk (overwegend zittend)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="workType" value="physical" required>
+                <span>Fysiek werk (bouw, zorg, horeca)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="workType" value="remote" required>
+                <span>Thuiswerken</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="workType" value="mixed" required>
+                <span>Mix van kantoor en thuis</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="workType" value="student" required>
+                <span>Student</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 2: Work Schedule -->
+          <div class="question" data-question="2">
+            <h3>Hoe zien jouw werktijden eruit?</h3>
+            <div class="options">
+              <label class="option-card">
+                <input type="radio" name="schedule" value="regular" required>
+                <span>Reguliere kantooruren (9-17)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="schedule" value="flexible" required>
+                <span>Flexibele uren</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="schedule" value="shifts" required>
+                <span>Wisselende diensten</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="schedule" value="night" required>
+                <span>Nachtdiensten</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="schedule" value="irregular" required>
+                <span>Onregelmatig/wisselend</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 3: Activity Level -->
+          <div class="question" data-question="3">
+            <h3>Hoeveel beweeg je gemiddeld per dag?</h3>
+            <div class="options">
+              <label class="option-card">
+                <input type="radio" name="activity" value="sedentary" required>
+                <span>Minimaal (vooral zitten)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="activity" value="light" required>
+                <span>Licht (beetje lopen, traplopen)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="activity" value="moderate" required>
+                <span>Matig (regelmatig beweging/sport)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="activity" value="active" required>
+                <span>Actief (dagelijks sport of fysiek werk)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 4: Sleep Quality -->
+          <div class="question" data-question="4">
+            <h3>Hoe is jouw slaapkwaliteit?</h3>
+            <div class="options">
+              <label class="option-card">
+                <input type="radio" name="sleep" value="poor" required>
+                <span>Slecht (moeite met in/doorslapen)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="sleep" value="inconsistent" required>
+                <span>Wisselend (soms goed, soms slecht)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="sleep" value="good" required>
+                <span>Goed (7-8 uur, uitgerust)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="sleep" value="insufficient" required>
+                <span>Te weinig uren (< 6 uur)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 5: Nutrition Habits -->
+          <div class="question" data-question="5">
+            <h3>Hoe eet je meestal?</h3>
+            <div class="options">
+              <label class="option-card">
+                <input type="radio" name="nutrition" value="poor" required>
+                <span>Vooral fastfood en bewerkt voedsel</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="nutrition" value="irregular" required>
+                <span>Onregelmatig, vaak maaltijden overslaan</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="nutrition" value="moderate" required>
+                <span>Redelijk gezond maar kan beter</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="nutrition" value="healthy" required>
+                <span>Gezond en gevarieerd</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 6: Time Availability -->
+          <div class="question" data-question="6">
+            <h3>Hoeveel tijd heb je per dag voor gezondheid?</h3>
+            <div class="options">
+              <label class="option-card">
+                <input type="radio" name="time" value="minimal" required>
+                <span>Minimaal (< 15 min)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="time" value="limited" required>
+                <span>Beperkt (15-30 min)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="time" value="moderate" required>
+                <span>Redelijk (30-60 min)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="time" value="flexible" required>
+                <span>Flexibel (> 60 min)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 7: Main Challenge -->
+          <div class="question" data-question="7">
+            <h3>Wat is jouw grootste uitdaging?</h3>
+            <div class="options">
+              <label class="option-card">
+                <input type="radio" name="challenge" value="energy" required>
+                <span>Gebrek aan energie</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="challenge" value="stress" required>
+                <span>Stress en mentale druk</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="challenge" value="time" required>
+                <span>Te weinig tijd</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="challenge" value="motivation" required>
+                <span>Motivatie en discipline</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="challenge" value="physical" required>
+                <span>Fysieke klachten (pijn, stijfheid)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 8: Travel Frequency -->
+          <div class="question" data-question="8">
+            <h3>Hoe vaak ben je onderweg voor werk?</h3>
+            <div class="options">
+              <label class="option-card">
+                <input type="radio" name="travel" value="never" required>
+                <span>Zelden/nooit</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="travel" value="occasional" required>
+                <span>Af en toe</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="travel" value="frequent" required>
+                <span>Regelmatig (wekelijks)</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="travel" value="constant" required>
+                <span>Zeer vaak (meerdere keren per week)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="quiz-navigation">
+            <button type="button" id="prevBtn" class="nav-btn secondary" style="display: none;">Vorige</button>
+            <button type="button" id="nextBtn" class="nav-btn primary">Volgende</button>
+            <button type="submit" id="submitBtn" class="nav-btn primary" style="display: none;">Bekijk Jouw Persoonlijke Advies</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="results" style="display: none;">
+        <h2>Jouw Persoonlijke Gezondheidsgids</h2>
+        <div class="guide-intro">
+          <p id="personalizedIntro"></p>
+        </div>
+
+        <div id="personalizedAdvice"></div>
+
+        <section class="cta">
+          <h2>Begin met Kleine Stappen</h2>
+          <p>Je hoeft niet alles in één keer te veranderen. Kies 2-3 adviezen die het meest haalbaar lijken en begin daarmee vandaag. Bouw langzaam op naar meer.</p>
+          <button onclick="location.reload()" class="reset-btn">Doe de vragenlijst opnieuw</button>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>Easy Gezondheid © 2026</p>
+      <p class="disclaimer">Deze informatie is bedoeld voor educatieve doeleinden. Raadpleeg altijd een zorgverlener voor persoonlijk medisch advies.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
