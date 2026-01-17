@@ -206,6 +206,78 @@ body {
   width: 80%;
 }
 
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: white;
+  min-width: 220px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 8px 0;
+  margin: 0;
+  z-index: 1000;
+  border: 1px solid rgba(2, 132, 199, 0.1);
+}
+
+/* Add padding area to prevent dropdown from closing */
+.dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  margin: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  margin: 2px 8px;
+}
+
+.dropdown-menu a:hover {
+  background: linear-gradient(135deg, #f0f9ff, #ecfeff);
+  color: #0284C7;
+  transform: translateX(4px);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+  animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 header {
   background: linear-gradient(-45deg, #0284C7, #0369A1, #14B8A6, #0891B2);
   background-size: 400% 400%;
@@ -619,12 +691,28 @@ h3 {
 }
 
 .cta h2 {
-  color: white;
+  color: white !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: white !important;
+  background-clip: unset !important;
   border-bottom: 3px solid rgba(255,255,255,0.3);
+  border-image: none !important;
   position: relative;
   z-index: 1;
   text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
+
+/* Override gradient for h2 elements with inline white color */
+section[style*="color: white"] h2[style*="color: white"],
+section[style*="color:white"] h2[style*="color:white"] {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: white !important;
+  background-clip: unset !important;
+  border-image: none !important;
+}
+
 
 .cta p {
   font-size: 1.1em;
