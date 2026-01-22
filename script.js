@@ -27,6 +27,61 @@ if (document.readyState === 'loading') {
   initScrollAnimations();
 }
 
+// Hamburger Menu Navigation
+function initHamburgerMenu() {
+  const menuToggle = document.getElementById('menuToggle');
+  const navClose = document.getElementById('navClose');
+  const navOverlay = document.getElementById('navOverlay');
+  const navSidebar = document.getElementById('navSidebar');
+  
+  if (!menuToggle || !navClose || !navOverlay || !navSidebar) return;
+  
+  function openMenu() {
+    menuToggle.classList.add('active');
+    navOverlay.classList.add('active');
+    navSidebar.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeMenu() {
+    menuToggle.classList.remove('active');
+    navOverlay.classList.remove('active');
+    navSidebar.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  
+  menuToggle.addEventListener('click', () => {
+    if (navSidebar.classList.contains('active')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+  
+  navClose.addEventListener('click', closeMenu);
+  navOverlay.addEventListener('click', closeMenu);
+  
+  // Close menu when clicking on a link
+  const navLinks = navSidebar.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+  
+  // Close menu on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navSidebar.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+}
+
+// Initialize hamburger menu when DOM is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initHamburgerMenu);
+} else {
+  initHamburgerMenu();
+}
+
 // Habit Tracker Functionality
 const habitButtons = document.querySelectorAll('.habit-btn');
 const trackerResult = document.getElementById('tracker-result');
@@ -483,4 +538,111 @@ if (healthQuiz) {
     html += '</ul></div>';
     return html;
   }
+}
+/* ====================================
+   VISUAL UPGRADE - SCROLL ANIMATIONS
+   ==================================== */
+
+// Enhanced scroll reveal for homepage sections
+function initHomepageScrollAnimations() {
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Add staggered delay for elements within section
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 100);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all sections
+  document.querySelectorAll('.section').forEach(section => {
+    sectionObserver.observe(section);
+  });
+
+  // Animate cards within sections with stagger
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const cards = entry.target.querySelectorAll('.help-box, .basis-item, .flow-step, .clarity-section');
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            
+            requestAnimationFrame(() => {
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 50);
+            });
+          }, index * 150);
+        });
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.section').forEach(section => {
+    cardObserver.observe(section);
+  });
+}
+
+// Parallax effect for hero icons
+function initHeroParallax() {
+  const heroIcons = document.querySelectorAll('.hero-icon');
+  
+  if (heroIcons.length === 0) return;
+  
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const rate = scrolled * 0.3;
+    
+    heroIcons.forEach((icon, index) => {
+      const speed = (index + 1) * 0.1;
+      icon.style.transform = `translateY(${rate * speed}px)`;
+    });
+  });
+}
+
+// Smooth scroll progress indicator
+function initScrollProgress() {
+  const progressBar = document.createElement('div');
+  progressBar.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+    z-index: 9999;
+    transition: width 0.1s ease;
+  `;
+  document.body.appendChild(progressBar);
+  
+  window.addEventListener('scroll', () => {
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.pageYOffset / windowHeight) * 100;
+    progressBar.style.width = scrolled + '%';
+  });
+}
+
+// Initialize all homepage enhancements
+function initHomepageEnhancements() {
+  initHomepageScrollAnimations();
+  initHeroParallax();
+  initScrollProgress();
+}
+
+// Run on page load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initHomepageEnhancements);
+} else {
+  initHomepageEnhancements();
 }

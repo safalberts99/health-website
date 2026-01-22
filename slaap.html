@@ -10,49 +10,54 @@
     <nav class="main-nav">
       <div class="nav-container">
         <a href="index.html" class="logo">Easy Gezondheid</a>
-                <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="guide.html">Persoonlijke Gids</a></li>
-          <li><a href="gedrag-en-gewoontes.html">Gedrag en Gewoontes</a></li>
-          <li class="dropdown">
-            <a href="gezondheid.html" class="dropdown-toggle">Gezondheid ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="slaap.html">😴 Slaap</a></li>
-              <li><a href="mentale-gezondheid.html">🧠 Mentale Gezondheid</a></li>
-              <li><a href="voeding.html">🍎 Voeding</a></li>
-              <li><a href="beweging.html">🏃 Beweging</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="sports.html" class="dropdown-toggle">Sports ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="calisthenics.html">💪 Kracht</a></li>
-              <li><a href="mobility.html">🧘 Mobiliteit</a></li>
-            </ul>
-          </li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="about.html">Over Ons</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
 
-    <main>
-      <section class="hero">
-        <div class="hero-decorations">
-          <span class="float-icon" style="--delay: 0s; --x: -20px; --y: -30px;">😴</span>
-          <span class="float-icon" style="--delay: 0.5s; --x: 30px; --y: -40px;">🛌</span>
-          <span class="float-icon" style="--delay: 1s; --x: -40px; --y: 20px;">🌙</span>
-          <span class="float-icon" style="--delay: 1.5s; --x: 40px; --y: 30px;">💤</span>
-          <span class="float-icon" style="--delay: 2s; --x: 0px; --y: -50px;">☀️</span>
-        </div>
-        <h1>Evidence-Based Slaapoptimalisatie</h1>
-        <p class="subtitle">
-          Slaapkwaliteit is net zo belangrijk als kwantiteit. Leer de wetenschappelijk onderbouwde strategieën voor diepe, herstellende slaap zonder pillen of complexe rituelen.
-        </p>
-      </section>
+    <div class="nav-overlay" id="navOverlay"></div>
+    <div class="nav-sidebar" id="navSidebar">
+      <div class="nav-sidebar-header">
+        <span class="nav-sidebar-title">Menu</span>
+        <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
+      </div>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="guide.html">📋 Persoonlijke Gids</a></li>
+        <li><a href="gedrag-en-gewoontes.html">🎯 Gedrag en Gewoontes</a></li>
+        
+        <li class="nav-divider"><span>Gezondheid</span></li>
+        <li><a href="gezondheid.html">💚 Gezondheid Overzicht</a></li>
+        <li><a href="slaap.html" class="active">😴 Slaap</a></li>
+        <li><a href="mentale-gezondheid.html">🧠 Mentale Gezondheid</a></li>
+        <li><a href="voeding.html">🍎 Voeding</a></li>
+        <li><a href="beweging.html">🏃 Beweging</a></li>
+        
+        <li class="nav-divider"><span>Sports</span></li>
+        <li><a href="calisthenics.html">💪 Kracht</a></li>
+        <li><a href="mobility.html">🧘 Mobiliteit</a></li>
+        
+        <li class="nav-divider"><span>Meer</span></li>
+        <li><a href="blog.html">📝 Blog</a></li>
+        <li><a href="about.html">ℹ️ Over Ons</a></li>
+        <li><a href="contact.html">📧 Contact</a></li>
+      </ul>
+    </div>
 
-      <section>
+    <header class="hero">
+      <h1>Slaap</h1>
+      <p class="subtitle">
+        Slaapkwaliteit is net zo belangrijk als kwantiteit. Leer de wetenschappelijk onderbouwde strategieën voor diepe, herstellende slaap zonder pillen of complexe rituelen.
+      </p>
+    </header>
+
+    <main>
+
+      <section class="section">
         <h2>🛌 Wat Is Goede Slaap Eigenlijk?</h2>
         <div class="info-box" style="background: linear-gradient(135deg, #f0f9ff, #ecfeff); padding: 24px; border-radius: 12px; margin-bottom: 24px;">
           <p style="color: #000000 !important; line-height: 1.7; margin: 0;">

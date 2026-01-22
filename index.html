@@ -11,34 +11,45 @@
     <nav class="main-nav">
       <div class="nav-container">
         <a href="index.html" class="logo">Easy Gezondheid</a>
-        <ul class="nav-menu">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="guide.html">Persoonlijke Gids</a></li>
-          <li><a href="gedrag-en-gewoontes.html">Gedrag en Gewoontes</a></li>
-          <li class="dropdown">
-            <a href="gezondheid.html" class="dropdown-toggle">Gezondheid ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="slaap.html">😴 Slaap</a></li>
-              <li><a href="mentale-gezondheid.html">🧠 Mentale Gezondheid</a></li>
-              <li><a href="voeding.html">🍎 Voeding</a></li>
-              <li><a href="beweging.html">🏃 Beweging</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="sports.html" class="dropdown-toggle">Sports ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="calisthenics.html">💪 Kracht</a></li>
-              <li><a href="mobility.html">🧘 Mobiliteit</a></li>
-            </ul>
-          </li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="about.html">Over Ons</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
 
-    <header>
+    <div class="nav-overlay" id="navOverlay"></div>
+    <div class="nav-sidebar" id="navSidebar">
+      <div class="nav-sidebar-header">
+        <span class="nav-sidebar-title">Menu</span>
+        <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
+      </div>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">🏠 Home</a></li>
+        <li><a href="guide.html">📋 Persoonlijke Gids</a></li>
+        <li><a href="gedrag-en-gewoontes.html">🔄 Gedrag en Gewoontes</a></li>
+        
+        <li class="nav-divider"><span>Gezondheid</span></li>
+        <li><a href="gezondheid.html">🌟 Overzicht</a></li>
+        <li><a href="slaap.html">😴 Slaap</a></li>
+        <li><a href="mentale-gezondheid.html">🧠 Mentale Gezondheid</a></li>
+        <li><a href="voeding.html">🍎 Voeding</a></li>
+        <li><a href="beweging.html">🏃 Beweging</a></li>
+        
+        <li class="nav-divider"><span>Sports</span></li>
+        <li><a href="calisthenics.html">💪 Kracht</a></li>
+        <li><a href="mobility.html">🧘 Mobiliteit</a></li>
+        
+        <li class="nav-divider"><span>Meer</span></li>
+        <li><a href="blog.html">📝 Blog</a></li>
+        <li><a href="about.html">ℹ️ Over Ons</a></li>
+        <li><a href="contact.html">✉️ Contact</a></li>
+      </ul>
+    </div>
+
+    <header class="hero">
       <h1>Houd gezondheid simpel</h1>
       <p class="subtitle">Door te focussen op wat écht telt: gedrag, gewoontes en kleine acties die je kunt volhouden.</p>
       <p class="hero-tagline">Zonder je leven om te gooien.</p>
@@ -55,7 +66,7 @@
     </header>
 
     <main>
-      <section class="afbakening">
+      <section class="afbakening section">
         <h2>Wat we bedoelen met simpel</h2>
         
         <p class="intro-paragraph">
@@ -65,28 +76,55 @@
         </p>
         
         <div class="clarity-content">
-          <div class="clarity-section">
-            <h3>Wat je hier wel vindt</h3>
+          <div class="clarity-section clarity-positive">
+            <div class="clarity-header">
+              <div class="clarity-icon">✓</div>
+              <h3>Wat je hier wel vindt</h3>
+            </div>
             <ul>
-              <li>een holistische benadering, zonder vaag te worden</li>
-              <li>praktische ideeën die passen in het dagelijks leven</li>
-              <li>ruimte voor nieuwe inzichten, zolang ze logisch en onderbouwd zijn</li>
+              <li>
+                <span class="item-icon">🎯</span>
+                <span class="item-text">een holistische benadering, zonder vaag te worden</span>
+              </li>
+              <li>
+                <span class="item-icon">💡</span>
+                <span class="item-text">praktische ideeën die passen in het dagelijks leven</span>
+              </li>
+              <li>
+                <span class="item-icon">🔬</span>
+                <span class="item-text">ruimte voor nieuwe inzichten, zolang ze logisch en onderbouwd zijn</span>
+              </li>
             </ul>
           </div>
           
-          <div class="clarity-section">
-            <h3>Wat je hier niet vindt</h3>
+          <div class="clarity-section clarity-negative">
+            <div class="clarity-header">
+              <div class="clarity-icon">✗</div>
+              <h3>Wat je hier niet vindt</h3>
+            </div>
             <ul>
-              <li>snelle oplossingen of korte challenges</li>
-              <li>vage termen zonder duidelijke betekenis</li>
-              <li>motivatiepraat zonder toepassing</li>
-              <li>adviezen die alleen werken in een perfect leven</li>
+              <li>
+                <span class="item-icon">⚡</span>
+                <span class="item-text">snelle oplossingen of korte challenges</span>
+              </li>
+              <li>
+                <span class="item-icon">💭</span>
+                <span class="item-text">vage termen zonder duidelijke betekenis</span>
+              </li>
+              <li>
+                <span class="item-icon">📣</span>
+                <span class="item-text">motivatiepraat zonder toepassing</span>
+              </li>
+              <li>
+                <span class="item-icon">🌟</span>
+                <span class="item-text">adviezen die alleen werken in een perfect leven</span>
+              </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="hoe-helpt">
+      <section class="hoe-helpt section">
         <div class="section-header">
           <h2>Hoe deze website je helpt</h2>
         </div>
@@ -131,7 +169,7 @@
         </div>
       </section>
 
-      <section class="basis-gezondheid">
+      <section class="basis-gezondheid section">
         <div class="section-header">
           <h2>De basis van gezondheid</h2>
         </div>
@@ -186,7 +224,7 @@
         <p class="section-footer">Alles op deze website valt onder één of meerdere van deze gebieden.</p>
       </section>
 
-      <section class="startpunt">
+      <section class="startpunt section">
         <div class="section-header">
           <h2>Startpunt — Nieuw hier? Begin eenvoudig</h2>
         </div>

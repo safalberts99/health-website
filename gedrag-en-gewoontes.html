@@ -11,187 +11,350 @@
     <nav class="main-nav">
       <div class="nav-container">
         <a href="index.html" class="logo">Easy Gezondheid</a>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="guide.html">Persoonlijke Gids</a></li>
-          <li><a href="gedrag-en-gewoontes.html" class="active">Gedrag en Gewoontes</a></li>
-          <li class="dropdown">
-            <a href="gezondheid.html" class="dropdown-toggle">Gezondheid ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="slaap.html">😴 Slaap</a></li>
-              <li><a href="mentale-gezondheid.html">🧠 Mentale Gezondheid</a></li>
-              <li><a href="voeding.html">🍎 Voeding</a></li>
-              <li><a href="beweging.html">🏃 Beweging</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="sports.html" class="dropdown-toggle">Sports ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="calisthenics.html">💪 Kracht</a></li>
-              <li><a href="mobility.html">🧘 Mobiliteit</a></li>
-            </ul>
-          </li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="about.html">Over Ons</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
 
-    <header>
+    <div class="nav-overlay" id="navOverlay"></div>
+    <div class="nav-sidebar" id="navSidebar">
+      <div class="nav-sidebar-header">
+        <span class="nav-sidebar-title">Menu</span>
+        <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
+      </div>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="guide.html">📋 Persoonlijke Gids</a></li>
+        <li><a href="gedrag-en-gewoontes.html" class="active">🎯 Gedrag en Gewoontes</a></li>
+        
+        <li class="nav-divider"><span>Gezondheid</span></li>
+        <li><a href="gezondheid.html">💚 Gezondheid Overzicht</a></li>
+        <li><a href="slaap.html">😴 Slaap</a></li>
+        <li><a href="mentale-gezondheid.html">🧠 Mentale Gezondheid</a></li>
+        <li><a href="voeding.html">🍎 Voeding</a></li>
+        <li><a href="beweging.html">🏃 Beweging</a></li>
+        
+        <li class="nav-divider"><span>Sports</span></li>
+        <li><a href="calisthenics.html">💪 Kracht</a></li>
+        <li><a href="mobility.html">🧘 Mobiliteit</a></li>
+        
+        <li class="nav-divider"><span>Meer</span></li>
+        <li><a href="blog.html">📝 Blog</a></li>
+        <li><a href="about.html">ℹ️ Over Ons</a></li>
+        <li><a href="contact.html">📧 Contact</a></li>
+      </ul>
+    </div>
+
+    <header class="hero">
       <h1>Gedrag en Gewoontes</h1>
       <p class="subtitle">Hoe gedrag daadwerkelijk vol te houden is</p>
     </header>
 
     <main>
-      <section class="intro">
+      <section class="intro section">
         <h2>Gezond leven is zelden een kennisprobleem</h2>
-        <p>De meeste mensen weten ongeveer wat gezond is.<br>
-        Meer bewegen. Beter slapen. Gezonder eten. Minder stress.</p>
+        <div class="info-box" style="background: linear-gradient(135deg, #f0f9ff, #ecfeff); padding: 24px; border-radius: 12px; margin-bottom: 24px;">
+          <p style="color: #000000 !important; line-height: 1.7; margin: 0;">
+            De meeste mensen weten ongeveer wat gezond is:<br>
+            <strong>Meer bewegen. Beter slapen. Gezonder eten. Minder stress.</strong><br><br>
+            Toch blijft het lastig om dit vol te houden.<br><br>
+            Niet omdat mensen lui zijn — maar omdat het dagelijks leven druk, onvoorspelbaar en vermoeiend is.
+          </p>
+        </div>
         
-        <p>Toch blijft het lastig om dit vol te houden.</p>
-        
-        <p>Niet omdat mensen lui zijn.<br>
-        Maar omdat het dagelijks leven druk, onvoorspelbaar en vermoeiend is.</p>
-        
-        <p><strong>Gezondheid faalt zelden door gebrek aan motivatie —<br>
-        maar door gedrag dat te groot, te vaag of te kwetsbaar is.</strong></p>
+        <div class="info-box" style="background: linear-gradient(135deg, #fef3c7, #fde68a); padding: 24px; border-radius: 12px;">
+          <p style="color: #000000 !important; line-height: 1.7; margin: 0; font-size: 1.1em;">
+            <strong>⚠️ Gezondheid faalt zelden door gebrek aan motivatie —<br>
+            maar door gedrag dat te groot, te vaag of te kwetsbaar is.</strong>
+          </p>
+        </div>
       </section>
 
-      <section>
-        <h2>Wat we hier anders doen</h2>
-        <p>Deze website vertrekt niet vanuit perfecte routines of ideale weken.<br>
+      <section class="section">
+        <h2>🎯 Wat we hier anders doen</h2>
+        <p style="margin-bottom: 24px; color: #475569; font-size: 1.05em;">Deze website vertrekt niet vanuit perfecte routines of ideale weken.<br>
         We vertrekken vanuit het echte leven.</p>
         
-        <p>Dat betekent:</p>
-        <ul>
-          <li>weinig tijd</li>
-          <li>wisselende energie</li>
-          <li>soms goede intenties, soms niet</li>
-        </ul>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <h4>⏰ Weinig tijd</h4>
+            <p>Gedrag dat past in een drukke dag</p>
+          </div>
+          <div class="tip-card">
+            <h4>🔋 Wisselende energie</h4>
+            <p>Aanpasbaar aan hoe je je voelt</p>
+          </div>
+          <div class="tip-card">
+            <h4>🎲 Soms goede intenties, soms niet</h4>
+            <p>Werkt ook zonder perfecte motivatie</p>
+          </div>
+        </div>
         
-        <p><strong>Daarom draait dit onderdeel niet om wat je zou moeten doen,<br>
-        maar om hoe gedrag daadwerkelijk vol te houden is.</strong></p>
+        <div class="info-box" style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); padding: 24px; border-radius: 12px; margin-top: 32px;">
+          <p style="color: #000000 !important; line-height: 1.7; margin: 0; text-align: center; font-size: 1.1em;">
+            <strong>Daarom draait dit onderdeel niet om wat je zou moeten doen,<br>
+            maar om hoe gedrag daadwerkelijk vol te houden is.</strong>
+          </p>
+        </div>
       </section>
 
-      <section>
-        <h2>De basisprincipes van werkend gedrag</h2>
+      <section class="section">
+        <h2>💎 De basisprincipes van werkend gedrag</h2>
         
-        <div class="principle">
-          <h3>1. Klein genoeg om niet te mislukken</h3>
-          <p>Een gewoonte moet zo klein zijn dat je hem ook kunt uitvoeren op een slechte dag.</p>
+        <div class="exercise-card">
+          <div class="exercise-header">
+            <h3>1. Klein genoeg om niet te mislukken</h3>
+            <span class="muscle-group">De Kracht van Kleine Stappen</span>
+          </div>
           
-          <p><strong>Niet:</strong></p>
-          <p style="margin-left: 2rem;">"Elke dag 45 minuten sporten"</p>
-          
-          <p><strong>Wel:</strong></p>
-          <p style="margin-left: 2rem;">"Ik doe iets dat beweging is — ook al is het 5 minuten"</p>
-          
-          <p>Als gedrag te groot is, haakt het brein af.<br>
-          Klein gedrag bouwt vertrouwen op.</p>
+          <div class="exercise-content">
+            <div class="exercise-description">
+              <p>Een gewoonte moet zo klein zijn dat je hem ook kunt uitvoeren op een slechte dag.</p>
+              
+              <div style="margin-top: 20px; display: grid; gap: 16px;">
+                <div style="padding: 16px; background: #fee2e2; border-radius: 8px; border-left: 4px solid #ef4444;">
+                  <strong style="color: #991b1b;">❌ Niet:</strong>
+                  <p style="margin: 8px 0 0 0; color: #000000;">"Elke dag 45 minuten sporten"</p>
+                </div>
+                
+                <div style="padding: 16px; background: #d1fae5; border-radius: 8px; border-left: 4px solid #10b981;">
+                  <strong style="color: #065f46;">✓ Wel:</strong>
+                  <p style="margin: 8px 0 0 0; color: #000000;">"Ik doe iets dat beweging is — ook al is het 5 minuten"</p>
+                </div>
+              </div>
+              
+              <div class="info-box" style="background: #e0f2fe; padding: 16px; border-radius: 8px; margin-top: 20px;">
+                <p style="color: #000000 !important; margin: 0;">
+                  <strong>💡 Als gedrag te groot is, haakt het brein af.<br>
+                  Klein gedrag bouwt vertrouwen op.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="principle">
-          <h3>2. Duidelijk gekoppeld aan je dag</h3>
-          <p>Gedrag werkt beter wanneer het vastzit aan iets dat al bestaat.</p>
+        <div class="exercise-card">
+          <div class="exercise-header">
+            <h3>2. Duidelijk gekoppeld aan je dag</h3>
+            <span class="muscle-group">Habit Stacking</span>
+          </div>
           
-          <p><strong>Voorbeeld:</strong></p>
-          <ul>
-            <li>na het opstaan → glas water</li>
-            <li>na tandenpoetsen → korte beweging</li>
-            <li>na avondeten → 5 minuten rust</li>
+          <div class="exercise-content">
+            <div class="exercise-description">
+              <p>Gedrag werkt beter wanneer het vastzit aan iets dat al bestaat.</p>
+              
+              <h4 style="margin-top: 20px;">📋 Praktische voorbeelden:</h4>
+              <div class="tips-grid" style="margin-top: 16px;">
+                <div class="tip-card">
+                  <h4>🌅 Na het opstaan</h4>
+                  <p>→ Glas water drinken</p>
+                </div>
+                <div class="tip-card">
+                  <h4>🪥 Na tandenpoetsen</h4>
+                  <p>→ Korte beweging of stretch</p>
+                </div>
+                <div class="tip-card">
+                  <h4>🍽️ Na avondeten</h4>
+                  <p>→ 5 minuten rust of wandeling</p>
+                </div>
+              </div>
+              
+              <div class="info-box" style="background: #fef3c7; padding: 16px; border-radius: 8px; margin-top: 20px;">
+                <p style="color: #000000 !important; margin: 0;">
+                  <strong>Je bouwt geen nieuwe routines uit het niets.<br>
+                  Je haakt ze vast aan bestaande momenten.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise-card">
+          <div class="exercise-header">
+            <h3>3. Ontworpen voor herhaling, niet voor perfectie</h3>
+            <span class="muscle-group">Consistentie > Perfectie</span>
+          </div>
+          
+          <div class="exercise-content">
+            <div class="exercise-description">
+              <p>Consistentie ontstaat niet door discipline, maar door gedrag dat weinig weerstand oproept.</p>
+              
+              <div class="info-box" style="background: linear-gradient(135deg, #ddd6fe, #e9d5ff); padding: 24px; border-radius: 12px; margin-top: 20px; text-align: center;">
+                <p style="color: #000000 !important; margin: 0; font-size: 1.15em;">
+                  <strong>🎯 Een gewoonte die je 70% van de tijd doet,<br>
+                  is krachtiger dan een perfecte routine die je opgeeft.</strong>
+                </p>
+              </div>
+              
+              <div style="margin-top: 20px; padding: 20px; background: #f8fafc; border-radius: 8px;">
+                <h4 style="margin-top: 0;">Waarom dit werkt:</h4>
+                <ul style="line-height: 1.8; color: #475569;">
+                  <li>Geen guilt bij een gemiste dag</li>
+                  <li>Makkelijker om weer te beginnen</li>
+                  <li>Bouwt op lange termijn meer resultaat op</li>
+                  <li>Minder burn-out en opgeefgedrag</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise-card">
+          <div class="exercise-header">
+            <h3>4. Je omgeving werkt mee — of tegen</h3>
+            <span class="muscle-group">Environment Design</span>
+          </div>
+          
+          <div class="exercise-content">
+            <div class="exercise-description">
+              <p>Gedrag gebeurt niet alleen in je hoofd.</p>
+              
+              <div style="margin-top: 20px;">
+                <p><strong>Wat zichtbaar is, gebeurt vaker.<br>
+                Wat moeite kost, gebeurt minder.</strong></p>
+              </div>
+              
+              <h4 style="margin-top: 24px;">🏗️ Daarom kijken we niet alleen naar wilskracht, maar ook naar:</h4>
+              
+              <div class="tips-grid" style="margin-top: 16px;">
+                <div class="tip-card">
+                  <h4>👀 Zichtbaarheid</h4>
+                  <p>Wat binnen handbereik ligt</p>
+                </div>
+                <div class="tip-card">
+                  <h4>🔄 Automatisering</h4>
+                  <p>Wat automatisch gebeurt</p>
+                </div>
+                <div class="tip-card">
+                  <h4>🚫 Eliminatie</h4>
+                  <p>Wat vermeden moet worden</p>
+                </div>
+              </div>
+              
+              <div class="info-box" style="background: linear-gradient(135deg, #ffedd5, #fed7aa); padding: 20px; border-radius: 8px; margin-top: 20px;">
+                <p style="color: #000000 !important; margin: 0; text-align: center; font-size: 1.05em;">
+                  <strong>💡 Kleine aanpassingen in je omgeving hebben vaak meer effect dan grote voornemens.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>🌉 Waarom dit de basis is van alle andere onderwerpen</h2>
+        <div class="info-box" style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); padding: 24px; border-radius: 12px; margin-bottom: 24px;">
+          <p style="color: #000000 !important; line-height: 1.7; margin: 0;">
+            <strong>Beweging, voeding, slaap en mentale gezondheid werken alleen als ze regelmatig plaatsvinden.</strong>
+          </p>
+        </div>
+        
+        <h3 style="margin-top: 32px; margin-bottom: 20px;">Gedrag is de brug tussen:</h3>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <h4>📚 Weten</h4>
+            <p>Je hebt de informatie</p>
+          </div>
+          <div class="tip-card">
+            <h4>💭 Willen</h4>
+            <p>Je hebt de intentie</p>
+          </div>
+          <div class="tip-card">
+            <h4>✅ Doen</h4>
+            <p>Je voert het daadwerkelijk uit</p>
+          </div>
+        </div>
+        
+        <div style="margin-top: 40px; padding: 28px; background: linear-gradient(135deg, #fef3c7, #fde68a); border-radius: 12px;">
+          <h4 style="margin-top: 0; color: #000000;">📋 Daarom zul je op deze website bij elk onderwerp zien:</h4>
+          <ul style="line-height: 1.9; color: #000000; font-size: 1.05em;">
+            <li><strong>Wat het belangrijkste is</strong> — focus op wat écht telt</li>
+            <li><strong>Wat een realistisch startpunt is</strong> — klein genoeg om te beginnen</li>
+            <li><strong>Hoe je het eenvoudiger maakt om vol te houden</strong> — praktische tips</li>
           </ul>
-          
-          <p>Je bouwt geen nieuwe routines uit het niets.<br>
-          Je haakt ze vast aan bestaande momenten.</p>
         </div>
-
-        <div class="principle">
-          <h3>3. Ontworpen voor herhaling, niet voor perfectie</h3>
-          <p>Consistentie ontstaat niet door discipline,<br>
-          maar door gedrag dat weinig weerstand oproept.</p>
-          
-          <p><strong>Een gewoonte die je 70% van de tijd doet,<br>
-          is krachtiger dan een perfecte routine die je opgeeft.</strong></p>
-        </div>
-
-        <div class="principle">
-          <h3>4. Je omgeving werkt mee — of tegen</h3>
-          <p>Gedrag gebeurt niet alleen in je hoofd.</p>
-          
-          <p>Wat zichtbaar is, gebeurt vaker.<br>
-          Wat moeite kost, gebeurt minder.</p>
-          
-          <p>Daarom kijken we niet alleen naar wilskracht,<br>
-          maar ook naar:</p>
-          <ul>
-            <li>wat binnen handbereik ligt</li>
-            <li>wat automatisch gebeurt</li>
-            <li>wat vermeden moet worden</li>
-          </ul>
-          
-          <p>Kleine aanpassingen in je omgeving hebben vaak meer effect dan grote voornemens.</p>
+        
+        <div class="info-box" style="background: linear-gradient(135deg, #ddd6fe, #e9d5ff); padding: 24px; border-radius: 12px; margin-top: 32px; text-align: center;">
+          <p style="color: #000000 !important; margin: 0; font-size: 1.2em; line-height: 1.8;">
+            <strong>Niet alles tegelijk.<br>
+            Wel iets dat blijft.</strong>
+          </p>
         </div>
       </section>
 
-      <section>
-        <h2>Waarom dit de basis is van alle andere onderwerpen</h2>
-        <p>Beweging, voeding, slaap en mentale gezondheid werken alleen<br>
-        als ze regelmatig plaatsvinden.</p>
+      <section class="cta-section section">
+        <h2>🚀 Begin hier (praktisch)</h2>
+        <p style="text-align: center; font-size: 1.1em; color: #475569; margin-bottom: 32px;">Als je één ding meeneemt van deze pagina, laat het dit zijn:</p>
         
-        <p><strong>Gedrag is de brug tussen:</strong></p>
-        <ul>
-          <li>weten</li>
-          <li>willen</li>
-          <li>daadwerkelijk doen</li>
-        </ul>
-        
-        <p>Daarom zul je op deze website bij elk onderwerp zien:</p>
-        <ul>
-          <li>wat het belangrijkste is</li>
-          <li>wat een realistisch startpunt is</li>
-          <li>hoe je het eenvoudiger maakt om vol te houden</li>
-        </ul>
-        
-        <p><strong>Niet alles tegelijk.<br>
-        Wel iets dat blijft.</strong></p>
-      </section>
-
-      <section class="cta-section">
-        <h2>Begin hier (praktisch)</h2>
-        <p>Als je één ding meeneemt van deze pagina, laat het dit zijn:</p>
-        
-        <div class="highlight-box">
-          <p><strong>Kies één klein gedrag<br>
-          dat je vandaag kunt doen<br>
-          zonder dat je leven hoeft te veranderen.</strong></p>
+        <div class="highlight-box" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 48px 32px; border-radius: 16px; box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3); text-align: center;">
+          <p style="font-size: 1.3em; line-height: 1.8; margin: 0; font-weight: 600;">
+            Kies één klein gedrag<br>
+            dat je vandaag kunt doen<br>
+            zonder dat je leven hoeft te veranderen.
+          </p>
           
-          <p>Dat is genoeg om te beginnen.</p>
-          
-          <p>De rest bouwen we stap voor stap.</p>
+          <div style="margin-top: 32px; padding-top: 32px; border-top: 2px solid rgba(255, 255, 255, 0.3);">
+            <p style="margin: 0 0 16px 0; font-size: 1.1em;">Dat is genoeg om te beginnen.</p>
+            <p style="margin: 0; font-size: 1.05em; opacity: 0.95;">De rest bouwen we stap voor stap.</p>
+          </div>
         </div>
       </section>
 
-      <section>
-        <h2>Wat dit níét is</h2>
-        <p>Om duidelijk te zijn: dit onderdeel gaat niet over</p>
-        <ul>
-          <li>motivatiehacks</li>
-          <li>discipline trainen</li>
-          <li>30-dagen challenges</li>
-          <li>perfecte routines</li>
-        </ul>
+      <section class="section">
+        <h2>🚫 Wat dit níét is</h2>
+        <p style="margin-bottom: 24px; color: #475569; font-size: 1.05em;">Om duidelijk te zijn: dit onderdeel gaat niet over</p>
         
-        <p><strong>Het gaat over gedrag dat past binnen een menselijk leven.</strong></p>
+        <div class="tips-grid">
+          <div class="tip-card" style="border-left: 4px solid #ef4444;">
+            <h4>⚡ Motivatiehacks</h4>
+            <p>Snelle trucjes die niet blijven werken</p>
+          </div>
+          <div class="tip-card" style="border-left: 4px solid #ef4444;">
+            <h4>💪 Discipline trainen</h4>
+            <p>Wilskracht als oplossing voor alles</p>
+          </div>
+          <div class="tip-card" style="border-left: 4px solid #ef4444;">
+            <h4>📅 30-dagen challenges</h4>
+            <p>Korte intensieve programma's</p>
+          </div>
+          <div class="tip-card" style="border-left: 4px solid #ef4444;">
+            <h4>⭐ Perfecte routines</h4>
+            <p>Onrealistische ideaalplaatjes</p>
+          </div>
+        </div>
+        
+        <div class="info-box" style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); padding: 32px; border-radius: 12px; margin-top: 32px; text-align: center;">
+          <p style="color: #000000 !important; margin: 0; font-size: 1.2em; line-height: 1.8;">
+            <strong>Het gaat over gedrag dat past binnen een menselijk leven.</strong>
+          </p>
+        </div>
       </section>
 
-      <section class="conclusion">
-        <h2>Tot slot</h2>
-        <p>Gezondheid is geen project dat je afrondt.<br>
-        Het is iets dat meebeweegt met je leven.</p>
+      <section class="conclusion section">
+        <h2>🎯 Tot slot</h2>
+        <div style="background: linear-gradient(135deg, #1e293b, #334155); color: white; padding: 48px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); text-align: center;">
+          <p style="font-size: 1.3em; line-height: 1.9; margin: 0 0 24px 0;">
+            Gezondheid is geen project dat je afrondt.<br>
+            Het is iets dat meebeweegt met je leven.
+          </p>
+          
+          <div style="padding: 24px; background: rgba(255, 255, 255, 0.1); border-radius: 12px; backdrop-filter: blur(10px);">
+            <p style="font-size: 1.4em; margin: 0; font-weight: 700; line-height: 1.7;">
+              Gedrag en gewoontes zijn geen truc —<br>
+              ze zijn het fundament.
+            </p>
+          </div>
+        </div>
         
-        <p><strong>Gedrag en gewoontes zijn geen truc —<br>
-        ze zijn het fundament.</strong></p>
+        <div style="margin-top: 48px; text-align: center;">
+          <a href="gezondheid.html" class="cta-btn primary" style="background: linear-gradient(135deg, #0ea5e9, #14b8a6); color: white; padding: 18px 48px; border-radius: 12px; font-size: 1.1em; font-weight: 600; text-decoration: none; display: inline-block; box-shadow: 0 8px 24px rgba(14, 165, 233, 0.4); transition: all 0.3s ease;">
+            Ontdek de gezondheidsgebieden →
+          </a>
+        </div>
       </section>
     </main>
 
