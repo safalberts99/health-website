@@ -1719,6 +1719,206 @@ footer {
 }
 
 /* Calisthenics Program Styles */
+.calisthenics-page .calisthenics-hero {
+  text-align: left;
+  padding: 120px 8vw;
+}
+
+.calisthenics-page .calisthenics-hero .hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.calisthenics-page .calisthenics-hero h1 {
+  margin-bottom: 12px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(6px);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.ghost-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ghost-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.hero-panel {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25);
+}
+
+.hero-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 16px;
+}
+
+.hero-stat {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.hero-stat .stat-value {
+  display: block;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.hero-stat .stat-label {
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+.hero-note {
+  margin-top: 20px;
+  background: rgba(15, 23, 42, 0.35);
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.hero-note p {
+  margin: 0 0 8px;
+}
+
+.hero-note p:last-child {
+  margin-bottom: 0;
+}
+
+.section-header {
+  max-width: 900px;
+  margin-bottom: 32px;
+}
+
+.section-lead {
+  font-size: 1.1em;
+  color: #1e293b;
+  margin-top: 8px;
+}
+
+.callout {
+  margin-top: 20px;
+  padding: 16px;
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  border-radius: 6px;
+}
+
+.weekly-pattern {
+  margin-top: 24px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f0f9ff, #ecfeff);
+  border-radius: 12px;
+  border-left: 4px solid #0284C7;
+  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.1);
+}
+
+.weekly-pattern h4 {
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.weekly-pattern p {
+  color: #000000;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.warning-box {
+  background: #fef3c7;
+  padding: 24px;
+  border-radius: 12px;
+  border-left: 4px solid #f59e0b;
+  box-shadow: 0 12px 20px rgba(245, 158, 11, 0.15);
+}
+
+.warning-box h4 {
+  color: #92400e;
+  margin-bottom: 12px;
+}
+
+.warning-box ul {
+  color: #713f12;
+  line-height: 1.8;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.calisthenics-cta {
+  background: linear-gradient(135deg, #0284C7, #0369A1);
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  margin: 40px 40px 80px;
+  padding: 80px 40px;
+}
+
+.calisthenics-cta h2 {
+  color: white;
+  border: none;
+  padding: 0;
+}
+
+.calisthenics-cta p {
+  font-size: 1.1em;
+  margin: 20px 0 0 0;
+  line-height: 1.7;
+}
+
+.calisthenics-cta strong {
+  color: #ffffff;
+}
+
+.calisthenics-cta em {
+  color: #e0f2fe;
+}
+
 .program-intro {
   background: linear-gradient(135deg, #f0f9ff, #ecfeff);
   padding: 32px;
@@ -2904,6 +3104,24 @@ footer {
     padding: 80px 24px 60px;
     min-height: 50vh;
   }
+
+  .calisthenics-page .calisthenics-hero {
+    text-align: center;
+    padding: 80px 24px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-panel {
+    padding: 20px;
+  }
+
+  .calisthenics-cta {
+    margin: 24px;
+    padding: 60px 24px;
+  }
   
   .hero h1 {
     font-size: 2.2em;
@@ -2951,4 +3169,3 @@ footer {
     font-size: 1.15em;
   }
 }
-

@@ -7,7 +7,7 @@
     <meta name="description" content="Efficiënt full-body calisthenics programma met 6 oefeningen" />
     <link rel="stylesheet" href="style.css?v=20260118003210" />
   </head>
-  <body>
+  <body class="calisthenics-page">
     <nav class="main-nav">
       <div class="nav-container">
         <a href="index.html" class="logo">Easy Gezondheid</a>
@@ -49,14 +49,53 @@
       </ul>
     </div>
 
-    <header class="hero">
-      <h1>Minimalistische Calisthenics Methode</h1>
-      <p class="subtitle">40 minuten per week - Hoge intensiteit, lage volume - Gebaseerd op Jack Wood's aanpak</p>
+    <header class="hero calisthenics-hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="hero-badge">💪 Calisthenics Programma</span>
+          <h1>Minimalistische Calisthenics Methode</h1>
+          <p class="subtitle">40 minuten per week - Hoge intensiteit, lage volume - Gebaseerd op Jack Wood's aanpak</p>
+          <div class="hero-actions">
+            <a class="cta-btn" href="#kernbewegingen">Bekijk de kernbewegingen</a>
+            <a class="ghost-btn" href="#weekschema">Weekschema bekijken</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-stat-grid">
+            <div class="hero-stat">
+              <span class="stat-value">40</span>
+              <span class="stat-label">min per week</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-value">3</span>
+              <span class="stat-label">trainingsdagen</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-value">6+1</span>
+              <span class="stat-label">kernskills</span>
+            </div>
+          </div>
+          <div class="hero-note">
+            <p><strong>Focus:</strong> maximale kracht, minimale tijd, volle recoveries.</p>
+            <p>Ontworpen voor wie efficiënt wil trainen zonder in te leveren op resultaat.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-decorations">
+        <span class="hero-icon">🏋️</span>
+        <span class="hero-icon">⚡</span>
+        <span class="hero-icon">🧘</span>
+        <span class="hero-icon">🧠</span>
+        <span class="hero-icon">🔥</span>
+      </div>
     </header>
 
     <main>
-      <section class="section">
-        <h2>De Minimalist Filosofie</h2>
+      <section class="section" id="filosofie">
+        <div class="section-header">
+          <h2>De Minimalist Filosofie</h2>
+          <p class="section-lead">Alles draait om een zo groot mogelijk effect met zo min mogelijk tijd.</p>
+        </div>
         <div class="program-intro">
           <p>Deze aanpak draait om <strong>extreme efficiëntie</strong>: train slechts 3 dagen per week met hoogintensieve sets op cruciale calisthenics bewegingen. De totale trainingstijd? Ongeveer 40 minuten per week, inclusief rust en warming-up.</p>
           
@@ -83,8 +122,11 @@
         </div>
       </section>
 
-      <section class="section">
-        <h2>Kern Principes</h2>
+      <section class="section" id="principes">
+        <div class="section-header">
+          <h2>Kern Principes</h2>
+          <p class="section-lead">Eén zware set, maximale focus en progressieve overload op skills.</p>
+        </div>
         
         <div class="exercise-card">
           <div class="exercise-content">
@@ -99,7 +141,7 @@
                 <li><strong>Focus op skill-geïntegreerde kracht</strong> - Denk aan planche, front lever, one-arm pull-ups - niet traditionele high-rep work.</li>
               </ul>
               
-              <p style="margin-top: 20px; padding: 16px; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 6px;">
+              <p class="callout">
                 <strong>⚡ Belangrijk:</strong> Dit is <em>niet</em> een traditioneel programma met 3-5 sets van 8-15 reps. De focus ligt op maximale inspanning in één enkele set, waardoor je minder tijd besteedt maar harder werkt.
               </p>
             </div>
@@ -107,9 +149,11 @@
         </div>
       </section>
 
-      <section>
-        <h2>De 6 Kernbewegingen</h2>
-        <p style="margin-bottom: 24px; color: #475569;">Deze bewegingen worden verdeeld over 3 trainingen per week. Elke beweging krijgt <strong>1 set van 1-5 reps</strong> op zeer hoge intensiteit.</p>
+      <section class="section" id="kernbewegingen">
+        <div class="section-header">
+          <h2>De 6 Kernbewegingen</h2>
+          <p class="section-lead">Deze bewegingen worden verdeeld over 3 trainingen per week. Elke beweging krijgt <strong>1 set van 1-5 reps</strong> op zeer hoge intensiteit.</p>
+        </div>
         
         <!-- Exercise 1: Planche Push-ups -->
         <div class="exercise-card">
@@ -429,9 +473,11 @@
         </div>
       </section>
 
-      <section>
-        <h2>Weekschema - De 3-Daagse Split</h2>
-        <p style="margin-bottom: 24px; color: #475569;">Verdeel de 6 bewegingen over 3 trainingen. Elke sessie duurt slechts 10-15 minuten inclusief rust.</p>
+      <section class="section" id="weekschema">
+        <div class="section-header">
+          <h2>Weekschema - De 3-Daagse Split</h2>
+          <p class="section-lead">Verdeel de 6 bewegingen over 3 trainingen. Elke sessie duurt slechts 10-15 minuten inclusief rust.</p>
+        </div>
         
         <div class="workout-schedule">
           <div class="schedule-option">
@@ -466,9 +512,9 @@
           </div>
         </div>
         
-        <div style="margin-top: 24px; padding: 20px; background: linear-gradient(135deg, #f0f9ff, #ecfeff); border-radius: 10px; border-left: 4px solid #0284C7;">
-          <h4 style="color: #000000 !important; margin-bottom: 12px;">📅 Wekelijks Patroon</h4>
-          <p style="color: #000000 !important; line-height: 1.7; margin: 0;">
+        <div class="weekly-pattern">
+          <h4>📅 Wekelijks Patroon</h4>
+          <p>
             <strong>Maandag:</strong> Dag 1 (Upper) • <strong>Woensdag:</strong> Dag 2 (Lower) • <strong>Vrijdag:</strong> Dag 3 (Specialty)<br>
             <strong>Overige dagen:</strong> Volledige rust of lichte mobility werk<br><br>
             <em>Totale trainingstijd per week: ~40 minuten (inclusief warming-up en rust tussen sets)</em>
@@ -476,8 +522,7 @@
         </div>
       </section>
 
-      <section>
-        
+      <section class="section">
         <div class="training-structure">
           <div class="structure-block">
             <h4>❌ Traditioneel Programma</h4>
@@ -514,8 +559,11 @@
         </div>
       </section>
 
-      <section>
-        <h2>Essentiële Principes voor Succes</h2>
+      <section class="section">
+        <div class="section-header">
+          <h2>Essentiële Principes voor Succes</h2>
+          <p class="section-lead">De gewoontes en focuspunten die het verschil maken op lange termijn.</p>
+        </div>
         <div class="tips-grid">
           <div class="tip-card">
             <h4>💯 Intensiteit > Volume</h4>
@@ -556,8 +604,11 @@
         </div>
       </section>
 
-      <section>
-        <h2>Veelgestelde Vragen</h2>
+      <section class="section">
+        <div class="section-header">
+          <h2>Veelgestelde Vragen</h2>
+          <p class="section-lead">Antwoorden op de vragen die we het vaakst krijgen van startende atleten.</p>
+        </div>
         <div class="training-structure">
           <div class="structure-block">
             <h4>❓ Is 1 set echt genoeg?</h4>
@@ -591,11 +642,14 @@
         </div>
       </section>
 
-      <section>
-        <h2>Belangrijke Waarschuwingen</h2>
-        <div style="background: #fef3c7; padding: 24px; border-radius: 10px; border-left: 4px solid #f59e0b;">
-          <h4 style="color: #92400e; margin-bottom: 12px;">⚠️ Dit Is Geavanceerde Training</h4>
-          <ul style="color: #713f12; line-height: 1.8; margin: 0; padding-left: 20px;">
+      <section class="section">
+        <div class="section-header">
+          <h2>Belangrijke Waarschuwingen</h2>
+          <p class="section-lead">Neem deze punten serieus om blessures en overbelasting te voorkomen.</p>
+        </div>
+        <div class="warning-box">
+          <h4>⚠️ Dit Is Geavanceerde Training</h4>
+          <ul>
             <li><strong>Niet voor absolute beginners:</strong> Als je nog geen 10 normale push-ups of 5 pull-ups kunt, bouw eerst een basis op.</li>
             <li><strong>Blessurerisico:</strong> Deze bewegingen vereisen grote gewrichtstabiliteit. Warm altijd goed op.</li>
             <li><strong>Progressie duurt tijd:</strong> Skills zoals planche en front lever nemen maanden tot jaren. Haast je niet.</li>
@@ -605,9 +659,9 @@
         </div>
       </section>
 
-      <section style="background: linear-gradient(135deg, #0284C7, #0369A1); color: white; text-align: center;">
-        <h2 style="color: white; border: none; padding: 0;">Klaar om te Beginnen?</h2>
-        <p style="font-size: 1.1em; margin: 20px 0 0 0; line-height: 1.7;">
+      <section class="section calisthenics-cta">
+        <h2>Klaar om te Beginnen?</h2>
+        <p>
           Vergeet volume. Vergeet uren in de sportschool. Focus op intensiteit, kwaliteit en progressie.<br><br>
           <strong style="font-size: 1.2em;">40 minuten per week. 6 essentiële bewegingen (+1 bonus). Maximale resultaten.</strong><br><br>
           <em>Start vandaag met de progressie die bij jou past.</em>
