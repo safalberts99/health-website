@@ -1,5 +1,8 @@
 // Scroll Animation - Reveal elements on scroll
 function initScrollAnimations() {
+  // Homepage uses its own reveal observer (see initHomepageReveal below)
+  if (document.body.classList.contains('homepage')) return;
+
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -645,4 +648,62 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initHomepageEnhancements);
 } else {
   initHomepageEnhancements();
+}
+
+// ============================================================
+// HOMEPAGE (index.html) — theme toggle, mobile menu, scroll reveal
+// All functions guard on body.homepage so they only run on the
+// new homepage and do not affect any sub-pages.
+// ============================================================
+
+function initHpThemeToggle() {
+  if (!document.body.classList.contains('homepage')) return;
+  const toggle = document.getElementById('themeToggle');
+  if (!toggle) return;
+  toggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    document.documentElement.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+  });
+}
+
+function initHpMobileMenu() {
+  if (!document.body.classList.contains('homepage')) return;
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks   = document.getElementById('navLinks');
+  if (!menuToggle || !navLinks) return;
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+}
+
+function initHpReveal() {
+  if (!document.body.classList.contains('homepage')) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), index * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    initHpThemeToggle();
+    initHpMobileMenu();
+    initHpReveal();
+  });
+} else {
+  initHpThemeToggle();
+  initHpMobileMenu();
+  initHpReveal();
 }

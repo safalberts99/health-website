@@ -1,144 +1,220 @@
-<!doctype html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Easy Gezondheid</title>
-    <meta name="description" content="Praktische tips voor gedragsverandering en gezondere dagelijkse gewoontes" />
-    <link rel="stylesheet" href="style.css?v=20260118003210" />
-  </head>
-  <body>
-    <nav class="main-nav">
-      <div class="nav-container">
-        <a href="index.html" class="logo">Easy Gezondheid</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Growth Path — Personal Growth Journal</title>
+  <meta name="description" content="A personal growth journal tracking fitness, nutrition, mental health, languages, and more.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="homepage">
 
-    <div class="nav-overlay" id="navOverlay"></div>
-    <div class="nav-sidebar" id="navSidebar">
-      <div class="nav-sidebar-header">
-        <span class="nav-sidebar-title">Menu</span>
-        <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
-      </div>
-      
-      <ul class="nav-menu">
-        <li><a href="index.html" class="active">🏠 Home</a></li>
-        <li><a href="guide.html">📋 Persoonlijke Gids</a></li>
-        <li><a href="gedrag-en-gewoontes.html">🔄 Gedrag en Gewoontes</a></li>
-        
-        <li class="nav-divider"><span>Gezondheid</span></li>
-        <li><a href="subjects.html">🌟 Overzicht</a></li>
-        <li><a href="slaap.html">😴 Slaap</a></li>
-        <li><a href="mentale-gezondheid.html">🧠 Mentale Gezondheid</a></li>
-        <li><a href="voeding.html">🍎 Voeding</a></li>
-        <li><a href="beweging.html">🏃 Beweging</a></li>
-        
-        <li class="nav-divider"><span>Sports</span></li>
-        <li><a href="calisthenics.html">💪 Kracht</a></li>
-        <li><a href="mobility.html">🧘 Mobiliteit</a></li>
-        
-        <li class="nav-divider"><span>Meer</span></li>
-        <li><a href="blog.html">📝 Blog</a></li>
-        <li><a href="about.html">ℹ️ Over Ons</a></li>
-        <li><a href="contact.html">✉️ Contact</a></li>
-      </ul>
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">The Growth Path</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="subjects.html">Subjects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="toggle-icon toggle-sun">&#9728;</span>
+        <span class="toggle-icon toggle-moon">&#9789;</span>
+      </button>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="hero-label">Personal Growth Journal</p>
+    <h1 class="hero-title">Small steps towards<br>a <em>better</em> self</h1>
+    <p class="hero-subtitle">Documenting my journey across fitness, nutrition, mental health, languages, and more. Not advice — just what works for me.</p>
+    <a href="#subjects" class="hero-cta">
+      Explore subjects
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- CATEGORY CARDS -->
+<section class="categories-section" id="subjects">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <p class="section-label">Areas of Focus</p>
+      <h2 class="section-title">What I'm Working On</h2>
+      <p class="section-desc">Each area represents a part of my life I'm actively trying to improve, have improved, or plan to explore.</p>
     </div>
 
-    <header class="hero">
-      <h1>This is my ongoing tracker</h1>
-      <p class="subtitle">A place where I keep track of things I am doing, want to do, or have done.</p>
-      <p class="hero-tagline">Not advice. Just what works for me.</p>
-      <div class="hero-cta">
-        <a href="subjects.html" class="cta-btn primary">Browse the subjects</a>
-      </div>
-      <div class="hero-decorations">
-        <div class="hero-icon">💪</div>
-        <div class="hero-icon">🥗</div>
-        <div class="hero-icon">😴</div>
-        <div class="hero-icon">🧘</div>
-        <div class="hero-icon">❤️</div>
-      </div>
-    </header>
+    <div class="card-grid">
 
-    <main>
-      <section class="afbakening section">
-        <h2>About this site</h2>
-
-        <p class="intro-paragraph">
-          This website is a place where I keep track of things I am doing, things I want to do or things I have done in the past.
-        </p>
-
-        <p class="intro-paragraph">
-          Not everything on this site is straight up advice. Some things are experimental and work for me. That does not mean it will
-          work for others.
-        </p>
-
-        <p class="intro-paragraph">
-          Each page has a subject I am focusing on, want to focus on or had been focusing on. The goal is simply improving each subject
-          that represents a page. Improvements or changes will also be discussed on a page.
-        </p>
-      </section>
-
-      <section class="basis-gezondheid section">
-        <div class="section-header">
-          <h2>What I want to improve</h2>
+      <a href="calisthenics.html" class="card reveal">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
         </div>
-
-        <ul class="list-reset">
-          <li class="list-callout">calisthenics</li>
-          <li class="list-callout">handtraining</li>
-          <li class="list-callout">padel</li>
-          <li class="list-callout">mobility</li>
-          <li class="list-callout">food/healthy eating</li>
-          <li class="list-callout">sleep</li>
-          <li class="list-callout">cuban salsa</li>
-          <li class="list-callout">bachata</li>
-          <li class="list-callout">kizomba</li>
-          <li class="list-callout">Career</li>
-          <li class="list-callout">mental state</li>
-          <li class="list-callout">public speaking/social interactions</li>
-          <li class="list-callout">Organized home</li>
-          <li class="list-callout">Brazilian portuguese</li>
-          <li class="list-callout">German</li>
-        </ul>
-      </section>
-
-      <section class="startpunt section">
-        <p class="intro-paragraph">If you are interested in one of these subjects, feel free to check them out.</p>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-section">
-          <h3>Easy Gezondheid</h3>
-          <p>Kleine veranderingen, grote stappen</p>
+        <h3 class="card-title">Fitness &amp; Strength</h3>
+        <p class="card-desc">Calisthenics progressions, hand training, and building functional strength through bodyweight movements.</p>
+        <div class="card-tags">
+          <span class="tag">Calisthenics</span>
+          <span class="tag">Hand Training</span>
+          <span class="tag">Padel</span>
         </div>
-        <div class="footer-section">
-          <h3>Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="guide.html">Persoonlijke Gids</a></li>
-            <li><a href="gedrag-en-gewoontes.html">Gedrag en Gewoontes</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+      </a>
+
+      <a href="mobility.html" class="card reveal">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
         </div>
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <p>Email: info@easygezondheid.nl</p>
+        <h3 class="card-title">Mobility &amp; Movement</h3>
+        <p class="card-desc">Improving flexibility, joint health, and overall movement quality for a pain-free, capable body.</p>
+        <div class="card-tags">
+          <span class="tag">Stretching</span>
+          <span class="tag">Joint Health</span>
+          <span class="tag">Recovery</span>
+        </div>
+      </a>
+
+      <a href="voeding.html" class="card reveal">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M20.7 11A8.5 8.5 0 0 0 13 3.3"/></svg>
+        </div>
+        <h3 class="card-title">Nutrition</h3>
+        <p class="card-desc">Exploring healthy eating patterns, meal strategies, and building a sustainable relationship with food.</p>
+        <div class="card-tags">
+          <span class="tag">Healthy Eating</span>
+          <span class="tag">Meal Prep</span>
+        </div>
+      </a>
+
+      <a href="mentale-gezondheid.html" class="card reveal">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 class="card-title">Mental Health &amp; Sleep</h3>
+        <p class="card-desc">Managing stress, improving sleep quality, and cultivating a healthier mental state day to day.</p>
+        <div class="card-tags">
+          <span class="tag">Sleep</span>
+          <span class="tag">Mental State</span>
+          <span class="tag">Habits</span>
+        </div>
+      </a>
+
+      <a href="subjects.html" class="card reveal">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3 class="card-title">Languages</h3>
+        <p class="card-desc">Learning Brazilian Portuguese and German — tracking methods, progress, and what's actually sticking.</p>
+        <div class="card-tags">
+          <span class="tag">Portuguese</span>
+          <span class="tag">German</span>
+        </div>
+      </a>
+
+      <a href="subjects.html" class="card reveal">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <h3 class="card-title">Dance</h3>
+        <p class="card-desc">Exploring Cuban Salsa, Bachata, and Kizomba — embracing rhythm and social connection through dance.</p>
+        <div class="card-tags">
+          <span class="tag">Cuban Salsa</span>
+          <span class="tag">Bachata</span>
+          <span class="tag">Kizomba</span>
+        </div>
+      </a>
+
+      <a href="subjects.html" class="card reveal">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3 class="card-title">Career &amp; Skills</h3>
+        <p class="card-desc">Growing professionally — public speaking, social confidence, and building a career I'm proud of.</p>
+        <div class="card-tags">
+          <span class="tag">Career</span>
+          <span class="tag">Public Speaking</span>
+          <span class="tag">Social Skills</span>
+        </div>
+      </a>
+
+      <a href="subjects.html" class="card reveal">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 class="card-title">Home &amp; Lifestyle</h3>
+        <p class="card-desc">Creating an organized, intentional living space that supports all the other goals I'm working towards.</p>
+        <div class="card-tags">
+          <span class="tag">Organization</span>
+          <span class="tag">Environment</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-strip" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="section-label">About This Site</p>
+        <h3>A living document of personal growth</h3>
+        <p>This website is where I track the things I'm working on, want to explore, or have already experimented with. It's a personal journal made public — not as advice, but as an honest record of what I've tried and what's worked for me.</p>
+        <p>Each page covers a subject I'm actively improving. As I learn, the pages evolve. Think of it as a living document — always a work in progress, just like me.</p>
+      </div>
+      <div class="about-visual reveal">
+        <div class="stat-card">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Focus Areas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">&#8734;</div>
+          <div class="stat-label">Room to Grow</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Journey</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Shortcuts</div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Easy Gezondheid. Alle rechten voorbehouden.</p>
-      </div>
-    </footer>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js?v=20260118003210"></script>
-  </body>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">The Growth Path</div>
+      <p class="footer-note">Small changes, big steps.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
