@@ -1,127 +1,75 @@
-<!doctype html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Over Ons - Easy Gezondheid</title>
-    <meta name="description" content="Meer informatie over Easy Gezondheid" />
-    <link rel="stylesheet" href="style.css?v=20260118003210" />
-  </head>
-  <body>
-    <nav class="main-nav">
-      <div class="nav-container">
-        <a href="index.html" class="logo">Easy Gezondheid</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
-
-    <div class="nav-overlay" id="navOverlay"></div>
-    <div class="nav-sidebar" id="navSidebar">
-      <div class="nav-sidebar-header">
-        <span class="nav-sidebar-title">Menu</span>
-        <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
-      </div>
-      
-      <ul class="nav-menu">
-        <li><a href="index.html">🏠 Home</a></li>
-        <li><a href="guide.html">📋 Persoonlijke Gids</a></li>
-        <li><a href="gedrag-en-gewoontes.html">🎯 Gedrag en Gewoontes</a></li>
-        
-        <li class="nav-divider"><span>Gezondheid</span></li>
-        <li><a href="subjects.html">💚 Gezondheid Overzicht</a></li>
-        <li><a href="slaap.html">😴 Slaap</a></li>
-        <li><a href="mentale-gezondheid.html">🧠 Mentale Gezondheid</a></li>
-        <li><a href="voeding.html">🍎 Voeding</a></li>
-        <li><a href="beweging.html">🏃 Beweging</a></li>
-        
-        <li class="nav-divider"><span>Sports</span></li>
-        <li><a href="calisthenics.html">💪 Kracht</a></li>
-        <li><a href="mobility.html">🧘 Mobiliteit</a></li>
-        
-        <li class="nav-divider"><span>Meer</span></li>
-        <li><a href="blog.html">📝 Blog</a></li>
-        <li><a href="about.html" class="active">ℹ️ Over Ons</a></li>
-        <li><a href="contact.html">📧 Contact</a></li>
-      </ul>
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - The Growth Path</title>
+  <meta name="description" content="Who I am, why this site exists, and what it is about.">
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">The Growth Path</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="subjects.html">Subjects</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="toggle-icon toggle-sun">&#9728;</span>
+        <span class="toggle-icon toggle-moon">&#9789;</span>
+      </button>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-
-    <header class="hero">
-      <h1>Over Ons</h1>
-      <p class="subtitle">Onze missie en visie</p>
-    </header>
-
-    <main>
-      <section class="section">
-        <h2>Onze Missie</h2>
-        <p>Easy Gezondheid helpt mensen om duurzame gedragsveranderingen door te voeren die leiden tot een gezonder en gelukkiger leven. We geloven in de kracht van kleine, haalbare stappen die samen een groot verschil maken.</p>
-      </section>
-
-      <section class="section">
-        <h2>Onze Aanpak</h2>
-        <p>Onze methode is gebaseerd op wetenschappelijk onderzoek naar gedragsverandering en gewoontevorming. We combineren inzichten uit psychologie, neurowetenschappen en gezondheidswetenschappen om praktische, toepasbare adviezen te bieden.</p>
-        
-        <div class="cards">
-          <div class="card">
-            <h3>Evidence-Based</h3>
-            <p>Alle adviezen zijn gebaseerd op wetenschappelijk onderzoek en bewezen effectieve methoden.</p>
-          </div>
-          <div class="card">
-            <h3>Praktisch</h3>
-            <p>We focussen op concrete, haalbare stappen die direct toepasbaar zijn in het dagelijks leven.</p>
-          </div>
-          <div class="card">
-            <h3>Duurzaam</h3>
-            <p>Geen snelle oplossingen, maar langdurige gedragsverandering die vol te houden is.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Kernwaarden</h2>
-        <ul class="values-list">
-          <li><strong>Toegankelijkheid:</strong> Gezondheid moet voor iedereen haalbaar zijn, ongeacht achtergrond of uitgangspunt.</li>
-          <li><strong>Wetenschappelijke integriteit:</strong> We baseren onze adviezen op betrouwbaar onderzoek en geven duidelijk aan waar onzekerheid bestaat.</li>
-          <li><strong>Empowerment:</strong> We geven je de kennis en tools om zelf controle te nemen over je gezondheid.</li>
-          <li><strong>Realisme:</strong> Geen onrealistische beloftes, maar eerlijke verwachtingen en haalbare doelen.</li>
-        </ul>
-      </section>
-
-      <section class="cta">
-        <h2>Begin Vandaag</h2>
-        <p>Klaar om te starten met jouw gezondheidsreis? Bekijk onze <a href="index.html" class="link-inverse">dagelijkse praktijken</a> of lees onze <a href="blog.html" class="link-inverse">blog</a> voor meer inspiratie.</p>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-section">
-          <h3>Easy Gezondheid</h3>
-          <p>Kleine veranderingen, grote stappen</p>
-        </div>
-        <div class="footer-section">
-          <h3>Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="guide.html">Persoonlijke Gids</a></li>
-            <li><a href="gedrag-en-gewoontes.html">Gedrag en Gewoontes</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <p>Email: info@easygezondheid.nl</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Easy Gezondheid. Alle rechten voorbehouden.</p>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+  </div>
+</nav>
+<section class="hero">
+  <h1 class="hero-title">About <em>Me</em></h1>
+  <p class="hero-subtitle">Who I am, why this site exists, and what you will find here.</p>
+</section>
+<main class="content-wrap">
+  <div class="about-section reveal">
+    <h2>The Story</h2>
+    <p>I started The Growth Path because I wanted a place to document the things I am working on in my life -- not as advice for others, but as an honest record for myself. When I look back at where I started with fitness, nutrition, languages, or mental health, I want to see the real journey, not a polished version of it.</p>
+    <p>This site is a living document. Pages change as I learn new things, drop old habits, and figure out what actually works. Nothing here is final.</p>
+  </div>
+  <div class="about-section reveal">
+    <h2>What This Site Is</h2>
+    <p>A personal journal made public. Each page covers a subject I am actively improving. The tips are personal -- what works for me, not what you should do. The stats are honest, not performative. And the writing is first person, because this is my experience.</p>
+    <p>This is not a blog about self-improvement. It is not advice. It is not a course. It is just one person documenting what they are trying, what sticks, and what does not.</p>
+  </div>
+  <div class="about-section reveal">
+    <h2>Currently Working On</h2>
+    <div class="focus-list">
+      <span class="tag">Calisthenics</span>
+      <span class="tag">Mobility</span>
+      <span class="tag">Nutrition</span>
+      <span class="tag">Mental Health</span>
+      <span class="tag">Portuguese</span>
+      <span class="tag">German</span>
+      <span class="tag">Dance</span>
+      <span class="tag">Career Skills</span>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">The Growth Path</div><p class="footer-note">Small changes, big steps.</p></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
 </html>

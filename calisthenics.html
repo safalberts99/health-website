@@ -1,254 +1,113 @@
-<!doctype html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Kracht (Calisthenics) - Easy Gezondheid</title>
-    <meta name="description" content="Calisthenics als krachtblok binnen het grotere gezondheidssysteem." />
-    <link rel="stylesheet" href="style.css?v=20260118003210" />
-  </head>
-
-  <body>
-    <!-- NAV (jouw bestaande) -->
-    <nav class="main-nav">
-      <div class="nav-container">
-        <a href="index.html" class="logo">Easy Gezondheid</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-
-    <div class="nav-overlay" id="navOverlay"></div>
-    <div class="nav-sidebar" id="navSidebar">
-      <div class="nav-sidebar-header">
-        <span class="nav-sidebar-title">Menu</span>
-        <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
-      </div>
-
-      <!-- Laat je menu intact; zet alleen de juiste active class op de pagina -->
-      <ul class="nav-menu">
-        <li><a href="index.html">🏠 Home</a></li>
-        <li><a href="guide.html">📋 Persoonlijke Gids</a></li>
-        <li><a href="gedrag-en-gewoontes.html">🎯 Gedrag en Gewoontes</a></li>
-
-        <li class="nav-divider"><span>Gezondheid</span></li>
-        <li><a href="subjects.html">💚 Gezondheid Overzicht</a></li>
-        <li><a href="slaap.html">😴 Slaap</a></li>
-        <li><a href="mentale-gezondheid.html">🧠 Mentale Gezondheid</a></li>
-        <li><a href="voeding.html">🍎 Voeding</a></li>
-        <li><a href="beweging.html">🏃 Beweging</a></li>
-
-        <li class="nav-divider"><span>Sports</span></li>
-        <li><a href="calisthenics.html" class="active">🎯 Kracht</a></li>
-
-        <li class="nav-divider"><span>Meer</span></li>
-        <li><a href="blog.html">📝 Blog</a></li>
-        <li><a href="about.html">ℹ️ Over Ons</a></li>
-        <li><a href="contact.html">📧 Contact</a></li>
-      </ul>
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness & Strength  The Growth Path</title>
+  <meta name="description" content="Calisthenics progressions, hand training, and building functional strength through bodyweight movements.">
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">The Growth Path</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="subjects.html" class="active">Subjects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="toggle-icon toggle-sun">&#9728;</span>
+        <span class="toggle-icon toggle-moon">&#9789;</span>
+      </button>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-
-    <!-- HERO -->
-    <header class="hero goal-hero">
-      <div class="goal-hero-top">
-        <span class="goal-badge">Status: <strong>In progress</strong></span>
-        <span class="goal-badge">Laatste update: <strong>2026-02-09</strong></span>
+  </div>
+</nav>
+<section class="hero">
+  <p class="breadcrumb"><a href="index.html">Home</a> / <a href="subjects.html">Subjects</a> / Fitness &amp; Strength</p>
+  <h1 class="hero-title">Fitness &amp; <em>Strength</em></h1>
+  <p class="hero-tagline">Getting stronger with bodyweight  simple, scalable, and built to last.</p>
+  <div class="hero-tags">
+    <span class="tag">Calisthenics</span>
+    <span class="tag">Hand Training</span>
+    <span class="tag">Padel</span>
+  </div>
+</section>
+<main class="content-wrap">
+  <div class="intro-callout reveal">
+    <p>I started calisthenics because I wanted a form of training that doesn't need a gym and can grow with me. It began with basic push-ups and pull-ups  and honestly, those are still the foundation of everything I do. The goal was never to look a certain way; it was to feel capable and in control of my own body.</p>
+  </div>
+  <section>
+    <h2>What Works For Me</h2>
+    <div class="tip-grid">
+      <div class="tip-card reveal">
+        <div class="tip-icon">&#129504;</div>
+        <h4>Technique first, volume later</h4>
+        <p>I keep reps clean before adding more. If form breaks, the set is done.</p>
       </div>
-
-      <h1>Kracht (Calisthenics)</h1>
-      <p class="subtitle">Sterker worden met eigen lichaamsgewicht en controle die past binnen het dagelijks leven.</p>
-
-      <!-- Mini subnav (super handig op lange pagina's) -->
-      <nav class="goal-subnav" aria-label="Pagina navigatie">
-        <a href="#overzicht">Overzicht</a>
-        <a href="#aanpak">Aanpak</a>
-        <a href="#progressie">Progressie</a>
-        <a href="#learnings">Lessen</a>
-        <a href="#volgende">Volgende focus</a>
-      </nav>
-    </header>
-
-    <main>
-      <!-- 1) OVERZICHT / WHAT + WHY -->
-      <section class="section" id="overzicht">
-        <h2>Overzicht</h2>
-        <div class="goal-kpi-grid">
-          <div class="goal-kpi">
-            <div class="goal-kpi-label">Start</div>
-            <div class="goal-kpi-value">2025-10-15</div>
-          </div>
-          <div class="goal-kpi">
-            <div class="goal-kpi-label">Ritme</div>
-            <div class="goal-kpi-value">2-3x per week</div>
-          </div>
-          <div class="goal-kpi">
-            <div class="goal-kpi-label">Definitie van succes</div>
-            <div class="goal-kpi-value">5 strikte pull-ups + 10 strakke push-ups</div>
-          </div>
-          <div class="goal-kpi">
-            <div class="goal-kpi-label">Focus nu</div>
-            <div class="goal-kpi-value">Consistente techniek</div>
-          </div>
-        </div>
-
-        <div class="info-box goal-note">
-          <p>
-            <strong>Waarom dit belangrijk is:</strong>
-            Kracht maakt dagelijkse bewegingen makkelijker, geeft controle over het lichaam en ondersteunt de rest van mijn
-            gezondheid. Calisthenics past hier omdat het simpel blijft, thuis kan, en schaalbaar is. Het gaat om volhouden
-            op de lange termijn, niet om snelle pieken.
-          </p>
-        </div>
-      </section>
-
-      <!-- 2) DE BETEKENIS / PRINCIPES (jouw bestaande stijl past hier perfect) -->
-      <section class="section">
-        <h2>Wat dit voor mij betekent</h2>
-        <div class="tips-grid">
-          <div class="tip-card">
-            <h4>🧠 Kernprincipe</h4>
-            <p>Techniek eerst, volume later.</p>
-          </div>
-          <div class="tip-card">
-            <h4>📈 Progressie</h4>
-            <p>Kleine variaties die net zwaarder zijn dan vorige week.</p>
-          </div>
-          <div class="tip-card">
-            <h4>🛌 Herstel</h4>
-            <p>Minstens een rustdag tussen sessies en genoeg slaap.</p>
-          </div>
-          <div class="tip-card">
-            <h4>🎯 Focus</h4>
-            <p>Geen eindeloze oefeningen, alleen het nodige werk.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 3) AANPAK / METHOD -->
-      <section class="section" id="aanpak">
-        <h2>Aanpak</h2>
-        <p class="section-intro">Wat ik concreet doe (kort, duidelijk, herhaalbaar).</p>
-
-        <div class="tips-grid">
-          <div class="tip-card">
-            <h4>Frequentie</h4>
-            <p>2-3 sessies per week, 35-45 minuten per keer.</p>
-          </div>
-          <div class="tip-card">
-            <h4>Oefen-selectie</h4>
-            <p>Push, pull, squat, hinge en core met 3-5 bewegingen per sessie.</p>
-          </div>
-          <div class="tip-card">
-            <h4>Progressie-knop</h4>
-            <p>Meer controle, zwaardere variant of langzamere tempo's.</p>
-          </div>
-          <div class="tip-card">
-            <h4>Meetbaarheid</h4>
-            <p>Reps, variant en rust noteren na elke training.</p>
-          </div>
-        </div>
-
-        <div class="info-box goal-rule">
-          <p><strong>Persoonlijke regel:</strong> Stop elke set met ruimte over voor nette techniek.</p>
-        </div>
-      </section>
-
-      <!-- 4) PROGRESS SNAPSHOT -->
-      <section class="section" id="progressie">
-        <h2>Progressie (snapshot)</h2>
-        <p class="section-intro">Kort logboek: wat gebeurde er, wat leer ik, wat verandert er.</p>
-
-        <div class="goal-log-list">
-          <article class="goal-log">
-            <div class="goal-log-top">
-              <span class="goal-log-date">Week van 2026-02-03</span>
-              <span class="goal-log-tag">Win</span>
-            </div>
-            <p><strong>Wat gebeurde er:</strong> Sessie 1 en 2 lukten zonder overslaan, betere controle bij pull-ups.</p>
-            <p><strong>Meetbaar:</strong> 4 strikte pull-ups, 8 strakke push-ups.</p>
-          </article>
-
-          <article class="goal-log">
-            <div class="goal-log-top">
-              <span class="goal-log-date">Week van 2026-01-27</span>
-              <span class="goal-log-tag">Neutral</span>
-            </div>
-            <p><strong>Wat gebeurde er:</strong> Minder energie, volume iets lager gehouden.</p>
-            <p><strong>Meetbaar:</strong> 3 strikte pull-ups, 7 strakke push-ups.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- 5) LEARNINGS -->
-      <section class="section" id="learnings">
-        <h2>Wat ik leerde & wat ik aanpas</h2>
-        <div class="tips-grid">
-          <div class="tip-card">
-            <h4>✅ Werkt</h4>
-            <p>Vaste startdagen geven momentum.</p>
-          </div>
-          <div class="tip-card">
-            <h4>⚠️ Werkt niet</h4>
-            <p>Te veel variatie zorgt voor onduidelijke progressie.</p>
-          </div>
-          <div class="tip-card">
-            <h4>🔧 Aanpassing</h4>
-            <p>Meer focus op dezelfde basisvarianten per blok.</p>
-          </div>
-          <div class="tip-card">
-            <h4>💡 Les</h4>
-            <p>Consistentie verslaat complexiteit.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6) NEXT FOCUS -->
-      <section class="section" id="volgende">
-        <h2>Volgende focus</h2>
-        <div class="info-box goal-next">
-          <ul>
-            <li>Pull-up techniek verfijnen (strakke reps).</li>
-            <li>Push-up tempo vertragen voor meer controle.</li>
-            <li>Meer core-tijd aan het einde van sessies.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- CTA's -->
-      <section class="mt-48 text-center">
-        <a href="beweging.html" class="cta-btn primary">Terug</a>
-        <a href="mobility.html" class="cta-btn secondary ml-16">Volgende</a>
-      </section>
-    </main>
-
-    <!-- FOOTER (jouw bestaande) -->
-    <footer>
-      <div class="footer-container">
-        <div class="footer-section">
-          <h3>Easy Gezondheid</h3>
-          <p>Kleine veranderingen, grote stappen</p>
-        </div>
-        <div class="footer-section">
-          <h3>Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="guide.html">Persoonlijke Gids</a></li>
-            <li><a href="gedrag-en-gewoontes.html">Gedrag en Gewoontes</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <p>Email: info@easygezondheid.nl</p>
-        </div>
+      <div class="tip-card reveal">
+        <div class="tip-icon">&#128200;</div>
+        <h4>Small progressions</h4>
+        <p>Harder variant, slower tempo, or one extra rep  tiny changes each week.</p>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Easy Gezondheid. Alle rechten voorbehouden.</p>
+      <div class="tip-card reveal">
+        <div class="tip-icon">&#128716;</div>
+        <h4>Rest between sessions</h4>
+        <p>At least one full rest day between strength sessions. Sleep matters more than an extra set.</p>
       </div>
-    </footer>
-
-    <script src="script.js?v=20260118003210"></script>
-  </body>
+      <div class="tip-card reveal">
+        <div class="tip-icon">&#127919;</div>
+        <h4>Minimal exercises</h4>
+        <p>Push, pull, squat, hinge, core  3 to 5 movements per session, nothing more.</p>
+      </div>
+      <div class="tip-card reveal">
+        <div class="tip-icon">&#128221;</div>
+        <h4>Logging every session</h4>
+        <p>Reps, variant, and rest after every training. It keeps me honest and shows real progress.</p>
+      </div>
+      <div class="tip-card reveal">
+        <div class="tip-icon">&#9201;</div>
+        <h4>35-45 minute sessions</h4>
+        <p>I train 2-3 times a week, keeping sessions short and focused. Consistency beats marathon workouts.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Where I Am Now</h2>
+    <div class="stats-strip reveal">
+      <div class="stat-item"><div class="stat-value">4</div><div class="stat-desc">Strict pull-ups</div></div>
+      <div class="stat-item"><div class="stat-value">8</div><div class="stat-desc">Clean push-ups</div></div>
+      <div class="stat-item"><div class="stat-value">2-3x</div><div class="stat-desc">Sessions / week</div></div>
+      <div class="stat-item"><div class="stat-value">Oct '25</div><div class="stat-desc">Started</div></div>
+    </div>
+  </section>
+  <div class="related-section reveal">
+    <h3>Related Subjects</h3>
+    <div class="related-links">
+      <a href="mobility.html" class="related-link">Mobility &amp; Movement</a>
+      <a href="voeding.html" class="related-link">Nutrition</a>
+      <a href="mentale-gezondheid.html" class="related-link">Mental Health</a>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">The Growth Path</div><p class="footer-note">Small changes, big steps.</p></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
 </html>

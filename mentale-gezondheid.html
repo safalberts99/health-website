@@ -1,569 +1,112 @@
-<!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mentale Gezondheid - Easy Gezondheid</title>
-    <link rel="stylesheet" href="style.css?v=20260118003210" />
-  </head>
-  <body>
-    <nav class="main-nav">
-      <div class="nav-container">
-        <a href="index.html" class="logo">Easy Gezondheid</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
-
-    <div class="nav-overlay" id="navOverlay"></div>
-    <div class="nav-sidebar" id="navSidebar">
-      <div class="nav-sidebar-header">
-        <span class="nav-sidebar-title">Menu</span>
-        <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
-      </div>
-      
-      <ul class="nav-menu">
-        <li><a href="index.html">🏠 Home</a></li>
-        <li><a href="guide.html">📋 Persoonlijke Gids</a></li>
-        <li><a href="gedrag-en-gewoontes.html">🎯 Gedrag en Gewoontes</a></li>
-        
-        <li class="nav-divider"><span>Gezondheid</span></li>
-        <li><a href="subjects.html">💚 Gezondheid Overzicht</a></li>
-        <li><a href="slaap.html">😴 Slaap</a></li>
-        <li><a href="mentale-gezondheid.html" class="active">🧠 Mentale Gezondheid</a></li>
-        <li><a href="voeding.html">🍎 Voeding</a></li>
-        <li><a href="beweging.html">🏃 Beweging</a></li>
-        
-        <li class="nav-divider"><span>Sports</span></li>
-        <li><a href="calisthenics.html">💪 Kracht</a></li>
-        <li><a href="mobility.html">🧘 Mobiliteit</a></li>
-        
-        <li class="nav-divider"><span>Meer</span></li>
-        <li><a href="blog.html">📝 Blog</a></li>
-        <li><a href="about.html">ℹ️ Over Ons</a></li>
-        <li><a href="contact.html">📧 Contact</a></li>
-      </ul>
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health - The Growth Path</title>
+  <meta name="description" content="Managing stress, improving sleep quality, and cultivating a healthier mental state day to day.">
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">The Growth Path</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="subjects.html" class="active">Subjects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="toggle-icon toggle-sun">&#9728;</span>
+        <span class="toggle-icon toggle-moon">&#9789;</span>
+      </button>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-
-    <header class="hero">
-      <h1>Mentale Gezondheid</h1>
-      <p class="subtitle">
-        Mentale gezondheid is geen gebrek aan problemen — het is een dynamische staat van welzijn die gedijt op gedrag, gewoontes en omgevingen die je zelf kunt vormgeven. Leer de sterkste lifestyle strategieën die de wetenschap ondersteunt.
-      </p>
-    </header>
-
-    <main>
-
-      <section class="section">
-        <h2>🧠 Wat Is Mentale Gezondheid Echt?</h2>
-        <div class="info-box info-gradient-blue mb-24">
-          <p class="text-dark leading-relaxed">
-            <strong>Mentale gezondheid = Niet alleen afwezigheid van pathologie</strong><br><br>
-            Het is een dynamische staat van <strong>psychologisch welzijn</strong> die wordt beïnvloed door:<br>
-            • Dagelijkse gewoontes en gedrag<br>
-            • Fysieke gezondheid en beweging<br>
-            • Sociale verbinding en omgeving<br>
-            • Slaap en circadiaans ritme<br>
-            • Stressmanagement vaardigheden<br><br>
-            <em>De meeste factoren die mentale gezondheid beïnvloeden zijn binnen jouw controle.</em>
-          </p>
-        </div>
-
-        <div class="tips-grid">
-          <div class="tip-card">
-            <h4>💪 Beweging</h4>
-            <p>Beïnvloedt neurochemie, ontstekingen, slaap en stemming. Sterke link met lagere depressie en angst.</p>
-          </div>
-          <div class="tip-card">
-            <h4>🧘 Mindfulness</h4>
-            <p>Traint je brein om met stress om te gaan, vermindert ruminatie en angst-symptomen.</p>
-          </div>
-          <div class="tip-card">
-            <h4>😴 Slaap</h4>
-            <p>Één van de sterkste voorspellers van mentale gezondheid — slechte slaap verhoogt risico op depressie en angst.</p>
-          </div>
-          <div class="tip-card">
-            <h4>🤝 Connectie</h4>
-            <p>Eenzaamheid en isolatie zijn sterk gelinkt aan angst, depressie en stress.</p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>💪 1. Beweging: Maak Activiteit Een Dagelijkse Gewoonte</h2>
-        
-        <div class="exercise-card">
-          <div class="exercise-header">
-            <h3>Waarom Beweging Cruciaal Is Voor Mentale Gezondheid</h3>
-            <span class="muscle-group">Neurochemie, Ontstekingen & Stemming</span>
-          </div>
-          
-          <div class="exercise-content">
-            <div class="exercise-description">
-              <h4>Fysieke Activiteit Beïnvloedt:</h4>
-              <ul>
-                <li><strong>Breinchemie:</strong> Endorfines, serotonine, dopamine en BDNF (brain-derived neurotrophic factor)</li>
-                <li><strong>Ontstekingen:</strong> Vermindert systemische inflammatie die gelinkt is aan depressie</li>
-                <li><strong>Immuunfunctie:</strong> Verbetert afweersysteem en stressbestendigheid</li>
-                <li><strong>Slaapregulatie:</strong> Helpt circadiaans ritme en diepe slaap</li>
-                <li><strong>Stemmingsstabiliteit:</strong> Regelmatige beweging buffert tegen stemmingsschommelingen</li>
-              </ul>
-              
-              <p class="info-box info-solid-green info-box--sm mt-16">
-                <strong>📊 Wetenschappelijk bewijs:</strong> Studies tonen dat beweging gelinkt is aan <strong>lagere percentages depressie en angst</strong> en verbeterd emotioneel welzijn. Effectiviteit vergelijkbaar met medicatie bij milde tot matige depressie.
-              </p>
-
-              <h4 class="mt-16">Wat Te Doen:</h4>
-              <ul>
-                <li>Streef naar <strong>30 minuten matige activiteit</strong> op de meeste dagen</li>
-                <li>Mix aerobe + krachttraining — beide hebben mentale gezondheidsvoordelen</li>
-                <li>Zachte beweging (yoga, tai chi) is bijzonder goed voor stress en angst</li>
-                <li>Buitenbeweging heeft extra voordelen (natuurcontact + zonlicht)</li>
-              </ul>
-            </div>
-            
-            <div class="panel-amber-soft">
-              <h4 class="text-brown mb-12">📅 Wekelijks Template Voorbeeld</h4>
-              <div class="stack-8 text-brown">
-                <div><strong>Ma:</strong> 30-min stevige wandeling of joggen</div>
-                <div><strong>Di:</strong> Kracht of calisthenics</div>
-                <div><strong>Wo:</strong> Yoga of mindful beweging</div>
-                <div><strong>Do:</strong> 30-min wandelen of fietsen</div>
-                <div><strong>Vr:</strong> Kracht of circuit bodyweight</div>
-                <div><strong>Za:</strong> Sport, wandeling in natuur, of actieve hobby</div>
-                <div><strong>Zo:</strong> Lichte beweging & rust</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>🧘 2. Mentale Praktijken: Train Je Brein Als Een Spier</h2>
-        
-        <div class="exercise-card">
-          <div class="exercise-header">
-            <h3>Mindfulness & Meditatie</h3>
-            <span class="muscle-group">Evidence-Based Mentale Training</span>
-          </div>
-          
-          <div class="exercise-content">
-            <div class="exercise-description">
-              <h4>Waarom Dit Werkt:</h4>
-              <p>Mindfulness-gebaseerde praktijken zoals <strong>Mindfulness-Based Stress Reduction (MBSR)</strong> en <strong>Mindfulness-Based Cognitive Therapy (MBCT)</strong> hebben sterk bewijs voor het verminderen van angst en depressieve symptomen.</p>
-              
-              <h4 class="mt-16">Hoe Te Starten:</h4>
-              <ul>
-                <li><strong>Dagelijkse 5-10 min mindfulness</strong> — adem focus, body scan, of simpele zitmeditatie</li>
-                <li>Begin klein: zelfs 2-3 minuten per dag bouwt de gewoonte op</li>
-                <li>Gebruik apps zoals Headspace, Calm, of Waking Up voor begeleiding</li>
-                <li>Consistentie belangrijker dan duur — dagelijks kort > wekelijks lang</li>
-              </ul>
-              
-              <h4 class="mt-16">🌬️ Box Breathing (Voor Acute Stress):</h4>
-              <ul>
-                <li>Adem in gedurende 4 tellen</li>
-                <li>Houd adem vast 4 tellen</li>
-                <li>Adem uit gedurende 4 tellen</li>
-                <li>Houd leeg 4 tellen</li>
-                <li>Herhaal 4-5 cycli</li>
-              </ul>
-              <p class="mt-8 text-italic">Perfect voor stresspieken, voor presentaties, of wanneer je overweldigd voelt.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="exercise-card">
-          <div class="exercise-header">
-            <h3>Cognitieve Training</h3>
-            <span class="muscle-group">Verminder Ruminatie & Piekeren</span>
-          </div>
-          
-          <div class="exercise-content">
-            <div class="exercise-description">
-              <h4>Concreteness Training (CNT):</h4>
-              <p>Technieken zoals CNT helpen ruminatie te verminderen door te focussen op zintuiglijke, huidige-moment details in plaats van "waarom?" of "wat als?" denken.</p>
-              
-              <h4 class="mt-16">Snelle CNT Praktijk:</h4>
-              <ul>
-                <li>Beschrijf een recente ervaring in <strong>precieze zintuiglijke details</strong></li>
-                <li>Wat zag je precies? Welke kleuren, vormen, bewegingen?</li>
-                <li>Wat hoorde je? Specifieke geluiden, volume, toon?</li>
-                <li>Wat voelde je fysiek? Textuur, temperatuur, spanning?</li>
-              </ul>
-              
-              <p class="info-box info-solid-indigo info-box--xs mt-12">
-                <strong>💡 Waarom dit helpt:</strong> Dit ankert je aandacht in het heden en doorbreekt angstige gedachtespiralen. Je brein kan niet tegelijk concreet waarnemen én abstract piekeren.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>🛌 3. Slaap & Circadiaanse Gezondheid</h2>
-        
-        <div class="exercise-card exercise-card--purple">
-          <div class="exercise-header">
-            <h3>Belangrijkste Pijler van Mentale Gezondheid</h3>
-            <span class="muscle-group">Slaapkwaliteit = Mentale Veerkracht</span>
-          </div>
-          
-          <div class="exercise-content">
-            <div class="exercise-description">
-              <h4>Waarom Dit Zo Belangrijk Is:</h4>
-              <p>Slaapkwaliteit en consistentie zijn <strong>onder de sterkste voorspellers</strong> van mentale gezondheid en welzijn. Slechte slaap verhoogt risico op depressie en angst significant.</p>
-              
-              <h4 class="mt-16">Belangrijkste Slaapverbeteringen:</h4>
-              <ul>
-                <li><strong>Consistent slaapschema:</strong> Zelfde bedtijd en wektijd, elke dag</li>
-                <li><strong>Wind-down routine:</strong> 60-90 min voor bed, lichten dimmen, schermen weg</li>
-                <li><strong>Cafeïne vermijden:</strong> Na 14:00-15:00 uur geen cafeïne</li>
-                <li><strong>Ochtendlicht exposure:</strong> Versterkt circadiaans ritme</li>
-                <li><strong>Koele kamer:</strong> 18-20°C is ideaal</li>
-              </ul>
-              
-              <p class="info-box info-solid-amber info-box--sm mt-16">
-                <strong>🔗 Voor complete slaapgids:</strong> Bekijk onze <a href="slaap.html" class="link-primary">slaappagina</a> voor gedetailleerde strategieën.
-              </p>
-
-              <div class="info-box info-solid-green info-box--sm mt-16">
-                <p class="text-green-dark">
-                  <strong>✅ Impact:</strong> Betere slaap = betere stemming, geheugen, impulscontrole en emotionele veerkracht.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>🥗 4. Voeding Voor Het Brein</h2>
-        
-        <div class="exercise-card">
-          <div class="exercise-header">
-            <h3>Voedsel Is Meer Dan Brandstof</h3>
-            <span class="muscle-group">Energie, Ontstekingen & Neurotransmitters</span>
-          </div>
-          
-          <div class="exercise-content">
-            <div class="exercise-description">
-              <h4>Voeding Beïnvloedt:</h4>
-              <ul>
-                <li><strong>Energieniveaus:</strong> Stabiele bloedsuiker = stabiele stemming</li>
-                <li><strong>Ontstekingen:</strong> Chronische inflammatie gelinkt aan depressie</li>
-                <li><strong>Neurotransmitters:</strong> Serotonine, dopamine productie afhankelijk van voeding</li>
-                <li><strong>Darmgezondheid:</strong> Gut-brain axis beïnvloedt mentale gezondheid</li>
-              </ul>
-              
-              <p class="info-box info-solid-indigo info-box--sm mt-16">
-                <strong>📊 Onderzoek:</strong> Gezonde voedingspatronen zijn geassocieerd met lager risico op depressie en beter psychologisch welzijn.
-              </p>
-              
-              <h4 class="mt-16">Belangrijkste Voedingsstrategieën:</h4>
-              <ul>
-                <li><strong>Prioriteer whole foods:</strong> Groenten, fruit, magere eiwitten, volkoren granen</li>
-                <li><strong>Anti-inflammatoire vetten:</strong> Vis (omega-3), olijfolie, noten, avocado</li>
-                <li><strong>Verminder ultra-verwerkte voeding:</strong> Minder toegevoegde suikers en geraffineerde koolhydraten</li>
-                <li><strong>Fermented foods:</strong> Yoghurt, kefir, kimchi voor darmbacteriën</li>
-                <li><strong>Voldoende eiwit:</strong> Voor neurotransmitter productie</li>
-              </ul>
-              
-              <h4 class="mt-16">🥗 Mediterraan Dieet Patroon:</h4>
-              <p>Onderzoek toont links tussen dit voedingspatroon en verbeterde stemming. Focus op:</p>
-              <ul>
-                <li>Veel groenten en fruit</li>
-                <li>Volkoren granen</li>
-                <li>Vis en gevogelte</li>
-                <li>Olijfolie als hoofdvet</li>
-                <li>Noten en zaden</li>
-                <li>Gematigd zuivel</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>🤝 5. Sociale Verbinding & Omgeving</h2>
-        
-        <div class="exercise-card">
-          <div class="exercise-header">
-            <h3>Mensen Zijn Sociale Wezens</h3>
-            <span class="muscle-group">Eenzaamheid = Risicofactor Voor Mentale Gezondheid</span>
-          </div>
-          
-          <div class="exercise-content">
-            <div class="exercise-description">
-              <h4>Waarom Dit Belangrijk Is:</h4>
-              <p>Eenzaamheid en isolatie zijn <strong>sterk gelinkt</strong> aan angst, depressie en stress. Sociale verbinding is een van de sterkste buffers tegen mentale gezondheidsproblemen.</p>
-              
-              <h4 class="mt-16">Hoe Verbinding Te Bouwen:</h4>
-              <ul>
-                <li><strong>Prioriteer betekenisvolle tijd</strong> met vrienden en familie</li>
-                <li><strong>Sluit je aan bij groepen:</strong> Clubs, sporten, hobby's, vrijwilligerswerk</li>
-                <li><strong>Plan regelmatige sociale activiteiten</strong> — zelfs kleine zijn belangrijk</li>
-                <li><strong>Diepte > Breedte:</strong> Paar hechte vriendschappen waardevoller dan veel oppervlakkige</li>
-                <li><strong>Wees kwetsbaar:</strong> Echte verbinding vereist authentieke gesprekken</li>
-              </ul>
-              
-              <h4 class="mt-16">💪 Bonus Effect:</h4>
-              <p>Interactie met ondersteunende mensen:</p>
-              <ul>
-                <li>Verhoogt veerkracht tijdens moeilijke tijden</li>
-                <li>Geeft emotioneel perspectief wanneer je worstelt</li>
-                <li>Vermindert ruminatie door externe input</li>
-                <li>Creëert gevoel van verbondenheid en betekenis</li>
-              </ul>
-            </div>
-            
-            <div class="info-box info-solid-amber info-box--sm mt-16">
-              <p class="text-brown">
-                <strong>⚠️ Voor introverten:</strong> Sociale verbinding hoeft niet luid of druk te zijn. Één-op-één koffie, wandelingen, of gezamenlijke activiteiten zijn net zo waardevol.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>📆 6. Structuur & Doel: Dagelijkse Routines Voor Stemmingsstabiliteit</h2>
-        
-        <div class="exercise-card">
-          <div class="exercise-header">
-            <h3>Balans & Voorspelbaarheid</h3>
-            <span class="muscle-group">Routine = Mentale Veerkracht</span>
-          </div>
-          
-          <div class="exercise-content">
-            <div class="exercise-description">
-              <h4>Waarom Routine Helpt:</h4>
-              <p>Psychologisch onderzoek suggereert dat een <strong>gebalanceerde routine</strong> — met tijd voor zelfzorg, werk, rust en recreatie — mentale veerkracht verbetert en stress-reactiviteit vermindert.</p>
-              
-              <h4 class="mt-16">Bouw Een Gezonde Routine:</h4>
-              
-              <div class="panel-morning">
-                <h4 class="mt-0 mb-12 text-brown">☀️ Ochtend</h4>
-                <ul class="m-0 text-brown">
-                  <li>Zonlicht exposure (10-30 min)</li>
-                  <li>Beweging (wandelen, stretching, workout)</li>
-                  <li>Eiwit-gerichte ontbijt</li>
-                  <li>5-10 min mindfulness of journaling</li>
-                </ul>
-              </div>
-              
-              <div class="panel-afternoon">
-                  <h4 class="mt-0 mb-12 text-blue-dark">☀️ Middag</h4>
-                  <ul class="m-0 text-blue-dark">
-                  <li>Lichte fysieke activiteit (korte wandeling)</li>
-                  <li>Sociale check-ins of pauze</li>
-                  <li>Gezonde lunch met groenten</li>
-                  <li>Geen cafeïne na 14:00-15:00 uur</li>
-                </ul>
-              </div>
-              
-              <div class="panel-evening">
-                <h4 class="mt-0 mb-12 text-indigo-dark">🌙 Avond</h4>
-                <ul class="m-0 text-indigo-dark">
-                  <li>Wind-down ritueel (lichten dimmen, schermen weg)</li>
-                  <li>Lichte stretching of ademwerk</li>
-                  <li>Vaste bedtijd (circadiaans ritme)</li>
-                  <li>Gratitude practice of reflectie</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>🧩 7. Stress Skills Die Je Vandaag Kunt Gebruiken</h2>
-        
-        <div class="tips-grid">
-          <div class="tip-card">
-            <h4>🌬️ Ademhalingspraktijken</h4>
-            <p><strong>Box Breathing:</strong> In4-Hold4-Out4-Hold4<br>
-            <strong>4-7-8 Adem:</strong> In4-Hold7-Out8<br>
-            Perfect voor acute stress en angst.</p>
-          </div>
-          
-          <div class="tip-card">
-            <h4>💪 Progressieve Spierontspanning</h4>
-            <p>Span en ontspan spiergroepen systematisch. Start bij voeten, werk omhoog naar hoofd. Vermindert fysieke spanning.</p>
-          </div>
-          
-          <div class="tip-card">
-            <h4>⏸️ Pauzes & Grenzen</h4>
-            <p>Korte pauzes van schermen of stressors. Leer "nee" zeggen tegen onnodige verplichtingen. Bescherm je energie.</p>
-          </div>
-          
-          <div class="tip-card">
-            <h4>📝 Journaling</h4>
-            <p>Schrijf zorgen op om gedachten te ordenen. Gratitude journal voor perspectief. "Brain dump" voor mentale ruimte.</p>
-          </div>
-          
-          <div class="tip-card">
-            <h4>🚶 Bewegingspauzes</h4>
-            <p>5-10 min wandelen bij stress. Verandering van omgeving helpt perspectief. Fysieke activiteit vermindert cortisol.</p>
-          </div>
-          
-          <div class="tip-card">
-            <h4>🎧 Geluidstherapie</h4>
-            <p>Witte ruis, natuurgeluiden, of rustige muziek. Helpt focus en vermindert overweldiging tijdens stress.</p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>🧠 Wanneer Professionele Hulp Zoeken</h2>
-        
-        <div class="exercise-card exercise-card--red">
-          <div class="exercise-header">
-            <h3>⚠️ Belangrijke Signalen</h3>
-            <span class="muscle-group">Lifestyle Is Krachtig, Maar Niet Altijd Genoeg</span>
-          </div>
-          
-          <div class="exercise-content">
-            <div class="exercise-description">
-              <h4>Hoewel lifestyle veranderingen krachtig zijn, zijn er tijden wanneer therapie of medische ondersteuning essentieel is:</h4>
-              
-              <ul class="mt-16">
-                <li><strong>Aanhoudende stemmingsveranderingen</strong> (>2 weken)</li>
-                <li><strong>Ernstige angst of paniekaanvallen</strong></li>
-                <li><strong>Gedachten aan zelfbeschadiging of hopeloosheid</strong></li>
-                <li><strong>Functionele beperking</strong> op werk/school/thuis</li>
-                <li><strong>Trauma of ingrijpende levensgebeurtenissen</strong></li>
-                <li><strong>Misbruik van alcohol of drugs</strong> om te copen</li>
-                <li><strong>Sociale isolatie of terugtrekking</strong></li>
-              </ul>
-              
-              <h4 class="mt-16">Professionele Opties:</h4>
-              <ul>
-                <li><strong>Psycholoog/Therapeut:</strong> Cognitieve Gedragstherapie (CGT), ACT, EMDR</li>
-                <li><strong>Huisarts:</strong> Eerste aanspreekpunt, kan doorverwijzen</li>
-                <li><strong>Psychiater:</strong> Voor medicatie indien nodig (SSRI's, etc.)</li>
-                <li><strong>GGZ Instanties:</strong> 113 Zelfmoordpreventie, Mindcorona, lokale GGZ</li>
-              </ul>
-              
-              <div class="info-box info-solid-red info-box--sm mt-16">
-                <p class="text-red-dark">
-                  <strong>🆘 Crisis:</strong> Bij acute suïcidale gedachten, bel 113 Zelfmoordpreventie (0800-0113) of ga naar de spoedeisende hulp.
-                </p>
-              </div>
-              
-              <div class="info-box info-solid-green info-box--sm mt-12">
-                <p class="text-green-dark">
-                  <strong>✅ Combinatie werkt best:</strong> Lifestyle veranderingen + professionele therapie is vaak de meest effectieve aanpak voor blijvende verbetering.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>📅 Wekelijkse Praktijk Template</h2>
-        <p class="mb-24 text-muted">Integreer deze evidence-based praktijken in je dagelijkse routine:</p>
-        
-        <div class="workout-schedule">
-          <div class="schedule-option">
-            <h3>Dagelijks</h3>
-            <p class="schedule-desc">Basis gewoontes die mentale gezondheid ondersteunen</p>
-            <div class="week-layout week-layout--single">
-              <span class="workout-day">✦ 20-40 min beweging (wandelen, kracht, yoga)</span>
-              <span class="workout-day">✦ 5-10 min mindfulness of meditatie</span>
-              <span class="workout-day">✦ Slaap routine (consistent schema)</span>
-              <span class="workout-day">✦ Gebalanceerde maaltijden (whole foods)</span>
-              <span class="workout-day">✦ Ademwerk wanneer gestrest</span>
-            </div>
-          </div>
-
-          <div class="schedule-option">
-            <h3>Wekelijks</h3>
-            <p class="schedule-desc">Diepere praktijken en sociale connectie</p>
-            <div class="week-layout week-layout--single">
-              <span class="workout-day">✦ 2-3 kracht- of cardiosessies</span>
-              <span class="workout-day">✦ 1-2 sociale uitjes (vrienden, familie, groepen)</span>
-              <span class="workout-day">✦ 1 lange wandeling of outdoor activiteit</span>
-              <span class="workout-day">✦ 10-15 min journaling sessie</span>
-              <span class="workout-day">✦ Gestructureerde hobby of leren</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="panel-info">
-          <h4 class="text-dark mb-12">🎯 Start Klein, Bouw Op</h4>
-          <p class="text-dark leading-relaxed">
-            Probeer niet alles tegelijk te veranderen. Kies <strong>1-2 gewoontes</strong> om mee te beginnen (bijv. dagelijkse wandeling + 5 min mindfulness). Na 2-3 weken, voeg een nieuwe gewoonte toe. <strong>Consistentie belangrijker dan perfectie.</strong>
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <h2>🧠 Waarom Deze Aanpak Werkt: De Wetenschap</h2>
-        <div class="tips-grid">
-          <div class="tip-card">
-            <h4>💪 Lifestyle Factoren</h4>
-            <p>Beweging, slaap en voeding zijn gelinkt aan depressie en angst uitkomsten in grote reviews. Gecombineerd effect sterker dan geïsoleerde gewoontes.</p>
-          </div>
-          <div class="tip-card">
-            <h4>🧘 Mindfulness Praktijken</h4>
-            <p>Verminderen symptomen en verbeteren emotionele regulatie. MBSR en MBCT wetenschappelijk gevalideerd voor angst en depressie.</p>
-          </div>
-          <div class="tip-card">
-            <h4>📆 Gezonde Routines</h4>
-            <p>Bouwen veerkracht tegen stress en bevorderen zenuwstelsel balans. Voorspelbaarheid vermindert cortisol en verhoogt gevoel van controle.</p>
-          </div>
-          <div class="tip-card">
-            <h4>🤝 Sociale Verbinding</h4>
-            <p>Buffert tegen mentale gezondheidsproblemen. Eenzaamheid verhoogt risico op depressie net zo veel als roken voor fysieke gezondheid.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta-gradient-section">
-        <h2 class="text-white no-border">Klaar Om Te Beginnen?</h2>
-        <p class="text-lg mt-20 leading-relaxed">
-          Mentale gezondheid is geen mysterie — het is een resultaat van dagelijkse keuzes.<br><br>
-          <strong class="text-l">Geen quick fixes. Alleen bewezen strategieën voor blijvend welzijn.</strong><br><br>
-          <em>Start vandaag met één kleine verandering.</em>
-        </p>
-      </section>
-
-      <section class="disclaimer">
-        <p><strong>Belangrijke opmerking:</strong> Bij ernstige of aanhoudende mentale gezondheidsproblemen, raadpleeg altijd een professional. Dit advies is algemeen en vervangt geen professionele medische of psychologische hulp. Bij crisis: bel 113 Zelfmoordpreventie (0800-0113).</p>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-section">
-          <h3>Easy Gezondheid</h3>
-          <p>Kleine veranderingen, grote stappen</p>
-        </div>
-        <div class="footer-section">
-          <h3>Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="guide.html">Persoonlijke Gids</a></li>
-            <li><a href="gedrag-en-gewoontes.html">Gedrag en Gewoontes</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <p>Email: info@easygezondheid.nl</p>
-        </div>
+  </div>
+</nav>
+<section class="hero">
+  <p class="breadcrumb"><a href="index.html">Home</a> / <a href="subjects.html">Subjects</a> / Mental Health</p>
+  <h1 class="hero-title">Mental <em>Health</em></h1>
+  <p class="hero-tagline">Learning to take care of my mind the same way I take care of my body.</p>
+  <div class="hero-tags">
+    <span class="tag">Sleep</span>
+    <span class="tag">Mental State</span>
+    <span class="tag">Habits</span>
+  </div>
+</section>
+<main class="content-wrap">
+  <div class="intro-callout reveal">
+    <p>Mental health is the foundation that everything else sits on. If my head is not right, training feels pointless, food choices slip, and motivation disappears. I have learned that taking care of my mental state is not a luxury - it is the most practical thing I can do. Most of it comes down to sleep, routine, and being honest with myself about how I am actually doing.</p>
+  </div>
+  <section>
+    <h2>What Works For Me</h2>
+    <div class="tip-grid">
+      <div class="tip-card reveal">
+        <div class="tip-icon">&#128564;</div>
+        <h4>Sleep is non-negotiable</h4>
+        <p>7-8 hours minimum. I track when I go to bed and when I wake up. Everything improves when sleep is consistent.</p>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Easy Gezondheid. Alle rechten voorbehouden.</p>
+      <div class="tip-card reveal">
+        <div class="tip-icon">&#128245;</div>
+        <h4>Phone out of the bedroom</h4>
+        <p>No scrolling before sleep, no alarm-snoozing in the morning. This one change improved both my sleep and my mornings.</p>
       </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+      <div class="tip-card reveal">
+        <div class="tip-icon">&#128694;</div>
+        <h4>Daily walks</h4>
+        <p>20-30 minutes outside, no music, no podcasts. Just walking and thinking - or not thinking. It resets my head.</p>
+      </div>
+      <div class="tip-card reveal">
+        <div class="tip-icon">&#128221;</div>
+        <h4>Journaling (loosely)</h4>
+        <p>Not every day, but when things feel heavy. Writing it down takes the weight out of my head and onto paper.</p>
+      </div>
+      <div class="tip-card reveal">
+        <div class="tip-icon">&#128260;</div>
+        <h4>Routine as an anchor</h4>
+        <p>Morning and evening routines give structure. When the day has a shape, I feel more in control - even on hard days.</p>
+      </div>
+      <div class="tip-card reveal">
+        <div class="tip-icon">&#129495;</div>
+        <h4>Breathing exercises</h4>
+        <p>Box breathing or just focused slow breaths when stress spikes. It is simple and it actually works in the moment.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Where I Am Now</h2>
+    <div class="stats-strip reveal">
+      <div class="stat-item"><div class="stat-value">7.5h</div><div class="stat-desc">Avg sleep</div></div>
+      <div class="stat-item"><div class="stat-value">Daily</div><div class="stat-desc">Morning walk</div></div>
+      <div class="stat-item"><div class="stat-value">3x/wk</div><div class="stat-desc">Journaling</div></div>
+    </div>
+  </section>
+  <div class="related-section reveal">
+    <h3>Related Subjects</h3>
+    <div class="related-links">
+      <a href="voeding.html" class="related-link">Nutrition</a>
+      <a href="calisthenics.html" class="related-link">Fitness &amp; Strength</a>
+      <a href="lifestyle.html" class="related-link">Home &amp; Lifestyle</a>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand">The Growth Path</div><p class="footer-note">Small changes, big steps.</p></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
 </html>
